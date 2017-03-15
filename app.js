@@ -37,12 +37,34 @@ passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
+var db_void = function function_name(argument) {
+  // var db = mongoose.createConnection('mongodb://root:FRcfa2Jh@104.155.167.71:27017/test', function(err) {
+  var db = mongoose.createConnection('mongodb://admin:akuma@104.155.167.71:27017/test', function(err) {
+    if (err) {
+      console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina remota.');
+    }
+    mongoose.connect('mongodb://localhost/test', function(err) {
+      console.log('Já que o banco de dados remoto não funciona vamos tentar com o local mesmo :P');
+      if (err) {
+        console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina local.....');
+        console.log('Realmente temos um problema! :(');
+      } else {
+        console.log(':P Bando de dados local Conectado!');
+      }
+    });
+  });
+}
+console.log('Iniciando testes');
+db_void();
+
 // Connect mongoose
-mongoose.connect('mongodb://35.184.5.60/test', function(err) {
-  if (err) {
-    console.log('Could not connect to mongodb on localhost. Ensure that you have mongodb running on localhost and mongodb accepts connections on standard ports!');
-  }
-});
+// mongodb://USER:PASSWORD@localhost/DATABASE
+// var db = mongoose.createConnection('mongodb://675769210965-compute@104.155.167.71:27017/test');
+// mongoose.connect('mongodb://localhost/test', function(err) {
+//   if (err) {
+//     console.log('Could not connect to mongodb on localhost. Ensure that you have mongodb running on localhost and mongodb accepts connections on standard ports!');
+//   }
+// });
 
 // Register routes
 app.use('/', require('./routes/routes'));
