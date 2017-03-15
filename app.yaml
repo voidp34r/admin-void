@@ -5,12 +5,25 @@ api_version: 1
 # f1-micro target
 resources:
   cpu: .5
-  memory_gb: .6
+  memory_gb: .9
   disk_size_gb: 10
 
 # can't use min instance 0 with auto scaling...
 manual_scaling:
   instances: 1
+
+health_check:
+  enable_health_check: True
+  check_interval_sec: 5
+  timeout_sec: 4
+  unhealthy_threshold: 2
+  healthy_threshold: 2
+  
+network:
+  forwarded_ports:
+    - 3000/tcp
+    - 27017/tcp
+    - 27018/tcp
 
 # Temporary workaround for a Cloud SDK bug.
 # Ensures that node_modules directory and any .log files are not uploaded (the
