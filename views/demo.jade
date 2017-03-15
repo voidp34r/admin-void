@@ -1,0 +1,436 @@
+
+extends layout
+
+block content
+  .static-content-wrapper
+    .static-content
+      .page-content
+        ol.breadcrumb
+          li
+            a(href='index.html') Home
+          li.active
+            a(href='index.html') Dashboard
+        .container-fluid
+          .row
+            .col-md-3
+              .info-tile.tile-orange
+                .tile-icon
+                  i.ti.ti-shopping-cart-full
+                .tile-heading
+                  span Orders
+                .tile-body
+                  span 2,150
+                .tile-footer
+                  span.text-success
+                    | 22.5% 
+                    i.fa.fa-level-up
+            .col-md-3
+              .info-tile.tile-success
+                .tile-icon
+                  i.ti.ti-bar-chart
+                .tile-heading
+                  span Revenues
+                .tile-body
+                  span $75,100
+                .tile-footer
+                  span.text-danger
+                    | 12.7% 
+                    i.fa.fa-level-down
+            .col-md-3
+              .info-tile.tile-info
+                .tile-icon
+                  i.ti.ti-stats-up
+                .tile-heading
+                  span Earnings
+                .tile-body
+                  span $40,150
+                .tile-footer
+                  span.text-success
+                    | 5.2% 
+                    i.fa.fa-level-up
+            .col-md-3
+              .info-tile.tile-danger
+                .tile-icon
+                  i.ti.ti-bar-chart-alt
+                .tile-heading
+                  span Visitors
+                .tile-body
+                  span 12,600
+                .tile-footer
+                  span.text-danger
+                    | 10.5% 
+                    i.fa.fa-level-down
+          div(data-widget-group='group1')
+            .row
+              .col-md-6
+                .panel.panel-info(data-widget='{"id" : "wiget9", "draggable": "false"}')
+                  .panel-heading
+                    h2 Social Stats
+                    .panel-ctrls.button-icon-bg(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-colorpicker='', data-action-refresh-demo='{"type": "circular"}')
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    #socialstats.mt-sm.mb-sm(style='height: 272px;')
+              .col-md-6
+                .panel.panel-bluegray(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 Earnings Stats
+                    .panel-ctrls.button-icon-bg(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-colorpicker='', data-action-refresh-demo='{"type": "circular"}')
+                  .panel-body
+                    #earnings.mt-sm.mb-sm(style='height: 272px;')
+            .row
+              .col-md-6
+                .panel.panel-gray(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 Recent Activities
+                    .panel-ctrls.button-icon-bg(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-colorpicker='', data-action-refresh-demo='{"type": "circular"}')
+                  //
+                    <div class="panel-body">
+                    <ul class="mini-timeline">
+                    <li class="mini-timeline-lime">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-body">
+                    <div class="timeline-content">
+                    <a href="#/" class="name">Vincent Keller</a> added new task <a href="#/">Admin Dashboard UI</a>
+                    <span class="time">4 mins ago</span>
+                    </div>
+                    </div>
+                    </li>
+                    <li class="mini-timeline-deeporange">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-body">
+                    <div class="timeline-content">
+                    <a href="#/" class="name">Shawna Owen</a> added <a href="#/" class="name">Alonzo Keller</a> and <a href="#/" class="name">Mario Bailey</a> to project <a href="#/">Wordpress eCommerce Template</a>
+                    <span class="time">6 mins ago</span>
+                    </div>
+                    </div>
+                    </li>
+                    <li class="mini-timeline-info">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-body">
+                    <div class="timeline-content">
+                    <a href="#/" class="name">Christian Delgado</a> commented on thread <a href="#/">Frontend Template PSD</a>
+                    <span class="time">12 mins ago</span>
+                    </div>
+                    </div>
+                    </li>
+                    <li class="mini-timeline-indigo">
+                    <div class="timeline-icon"></div>
+                    <div class="timeline-body">
+                    <div class="timeline-content">
+                    <a href="#/" class="name">Matheus Rafael</a> added <a href="#/" class="name">Frend Pratt</a> and <a href="#/" class="name">Robin Horton</a> to project <a href="#/">Material Design Admin Template</a>
+                    <span class="time">6 hours ago</span>
+                    </div>
+                    </div>
+                    </li>
+                    <li class="mini-timeline-default">
+                    <div class="timeline-body ml-n">
+                    <div class="timeline-content">
+                    <button type="button" data-loading-text="Loading..." class="loading-example-btn btn btn-sm btn-default">See more</button>
+                    </div>
+                    </div>
+                    </li>
+                    </ul>
+                    </div>
+                  .panel-body.scroll-pane(style='height: 320px;')
+                    .scroll-content
+                      ul.mini-timeline
+                        li.mini-timeline-lime
+                          .timeline-icon
+                          .timeline-body
+                            .timeline-content
+                              a.name(href='#/') Vincent Keller
+                              |  added new task 
+                              a(href='#/') Admin Dashboard UI
+                              span.time 4 mins ago
+                        li.mini-timeline-deeporange
+                          .timeline-icon
+                          .timeline-body
+                            .timeline-content
+                              a.name(href='#/') Shawna Owen
+                              |  added 
+                              a.name(href='#/') Alonzo Keller
+                              |  and 
+                              a.name(href='#/') Mario Bailey
+                              |  to project 
+                              a(href='#/') Wordpress eCommerce Template
+                              span.time 6 mins ago
+                        li.mini-timeline-info
+                          .timeline-icon
+                          .timeline-body
+                            .timeline-content
+                              a.name(href='#/') Christian Delgado
+                              |  commented on thread 
+                              a(href='#/') Frontend Template PSD
+                              span.time 12 mins ago
+                        li.mini-timeline-indigo
+                          .timeline-icon
+                          .timeline-body
+                            .timeline-content
+                              a.name(href='#/') Matheus Rafael
+                              |  added 
+                              a.name(href='#/') Frend Pratt
+                              |  and 
+                              a.name(href='#/') Robin Horton
+                              |  to project 
+                              a(href='#/') Material Design Admin Template
+                              span.time 6 hours ago
+                        li.mini-timeline-lime
+                          .timeline-icon
+                          .timeline-body
+                            .timeline-content
+                              a.name(href='#/') Vincent Keller
+                              |  added new task 
+                              a(href='#/') Admin Dashboard UI
+                              span.time 4 mins ago
+                        li.mini-timeline-deeporange
+                          .timeline-icon
+                          .timeline-body
+                            .timeline-content
+                              a.name(href='#/') Shawna Owen
+                              |  added 
+                              a.name(href='#/') Alonzo Keller
+                              |  and 
+                              a.name(href='#/') Mario Bailey
+                              |  to project 
+                              a(href='#/') Wordpress eCommerce Template
+                              span.time 6 mins ago
+                        li.mini-timeline-info
+                          .timeline-icon
+                          .timeline-body
+                            .timeline-content
+                              a.name(href='#/') Christian Delgado
+                              |  commented on thread 
+                              a(href='#/') Frontend Template PSD
+                              span.time 12 mins ago
+                        li.mini-timeline-indigo
+                          .timeline-icon
+                          .timeline-body
+                            .timeline-content
+                              a.name(href='#/') Matheus Rafael
+                              |  added 
+                              a.name(href='#/') Frend Pratt
+                              |  and 
+                              a.name(href='#/') Robin Horton
+                              |  to project 
+                              a(href='#/') Material Design Admin Template
+                              span.time 6 hours ago
+                        li.mini-timeline-default
+                          .timeline-body.ml-n
+                            .timeline-content
+                              button.loading-example-btn.btn.btn-sm.btn-default(type='button', data-loading-text='Loading...') See more
+              .col-md-3
+                .panel.panel-white(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 New Members
+                    .panel-ctrls.button-icon-bg(data-actions-container='', data-action-refresh-demo='{"type": "circular"}')
+                  .panel-body
+                    ul.widget-avatar
+                      li
+                        img(src='/images/user_160x160.jpg', alt='')
+                      li
+                        img(src='/images/user_160x160.jpg', alt='')
+                      li
+                        img(src='/images/user_160x160.jpg', alt='')
+                      li
+                        img(src='/images/user_160x160.jpg', alt='')
+                      li
+                        img(src='/images/user_160x160.jpg', alt='')
+                    button.btn.btn-block.btn-primary View More
+                .panel.panel-white(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 Online Now
+                    .panel-ctrls.button-icon-bg(data-actions-container='', data-action-refresh-demo='{"type": "circular"}')
+                  .panel-body
+                    ul.widget-avatar
+                      li(data-status='online')
+                        img(src='/images/user_160x160.jpg', alt='')
+                      li(data-status='online')
+                        img(src='/images/user_160x160.jpg', alt='')
+                      li(data-status='online')
+                        img(src='/images/user_160x160.jpg', alt='')
+                      li(data-status='away')
+                        img(src='/images/user_160x160.jpg', alt='')
+                      li(data-status='busy')
+                        img(src='/images/user_160x160.jpg', alt='')
+                    button.btn.btn-block.btn-success Contact List
+              .col-md-3
+                .panel.panel-midnightblue.widget-progress(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 Progress
+                    .panel-ctrls.button-icon-bg(data-actions-container='', data-action-refresh-demo='{"type": "circular"}')
+                  .panel-body
+                    #progress.easypiechart.mb-md(data-percent='37')
+                      span.percent-non
+                  .panel-footer
+                    .tabular
+                      .tabular-row
+                        .tabular-cell
+                          span.status-total Total
+                          span.status-value 100
+                        .tabular-cell
+                          span.status-pending Pending
+                          span.status-value 63
+                .widget-weather
+                  .pull-left
+                    span.weather-location Toronto, CA
+                    span.weather-desc Sunny
+                  .pull-right
+                    span.weather-temp
+                      | 16
+                      span ºC
+            .row
+              .col-md-8
+                .panel.panel-default(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 Visitor Stats
+                    .panel-ctrls.button-icon-bg(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-colorpicker='', data-action-refresh-demo='{"type": "circular"}')
+                  .panel-body
+                    .row
+                      .col-md-6
+                        .spark-container.mb-xl
+                          .pull-left
+                            h2.title(style='color: #cddc39') Pageviews
+                            h3.number 19,600
+                          .pull-right
+                            h2.title(style='color: #ff5722; text-align: right;') Sessions
+                            h3.number 1,200
+                          .spark-pageviews
+                      .col-md-6
+                        #newvsreturning.mt-md.mb-md(style='height: 144px')
+                    .row
+                      .col-md-3
+                        .spark-container
+                          h2.title Users
+                          h3.number 700
+                          .spark-users
+                      .col-md-3
+                        .spark-container
+                          h2.title Avg. Duration
+                          h3.number 00:04:36
+                          .spark-avgduration
+                      .col-md-3
+                        .spark-container
+                          h2.title Page/Session
+                          h3.number 4.20
+                          .spark-pagesession
+                      .col-md-3
+                        .spark-container
+                          h2.title Bounce Rate
+                          h3.number 52.10%
+                          .spark-bouncerate
+              .col-md-4
+                .panel.panel-teal(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 Browsers
+                    .panel-ctrls.button-icon-bg(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-colorpicker='', data-action-refresh-demo='{"type": "circular"}')
+                  .panel-body.no-padding
+                    table.table.browsers.m-n
+                      tbody
+                        tr
+                          td Google Chrome
+                          td.text-right 43.7%
+                          td.vam(style='width: 56px;')
+                            .progress.m-n
+                              .progress-bar.progress-bar-teal(style='width: 100%')
+                        tr
+                          td Firefox
+                          td.text-right 20.5%
+                          td.vam
+                            .progress.m-n
+                              .progress-bar.progress-bar-teal(style='width: 50%')
+                        tr
+                          td Opera
+                          td.text-right 14.6%
+                          td.vam
+                            .progress.m-n
+                              .progress-bar.progress-bar-teal(style='width: 40%')
+                        tr
+                          td Safari
+                          td.text-right 9.1%
+                          td.vam
+                            .progress.m-n
+                              .progress-bar.progress-bar-teal(style='width: 25%')
+                        tr
+                          td Internet Explorer
+                          td.text-right 5.3%
+                          td.vam
+                            .progress.m-n
+                              .progress-bar.progress-bar-teal(style='width: 12.5%')
+                        tr
+                          td Torch
+                          td.text-right 2.9%
+                          td.vam
+                            .progress.m-n
+                              .progress-bar.progress-bar-teal(style='width: 9%')
+                        tr
+                          td Maxthon
+                          td.text-right 2.3%
+                          td.vam
+                            .progress.m-n
+                              .progress-bar.progress-bar-teal(style='width: 6%')
+                        tr
+                          td Others
+                          td.text-right 1.6%
+                          td.vam
+                            .progress.m-n
+                              .progress-bar.progress-bar-teal(style='width: 3%')
+            .row
+              .col-md-4
+                .panel.panel-realtime(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 Real-Time
+                    .panel-ctrls.mr-n
+                      .mt-md.mb-md
+                        input.js-switch-success.switchery-xs(type='checkbox', checked='')
+                  .panel-body
+                    span.rightnow Right Now
+                    span.number 20
+                    span.activeuser active Users right now
+                    #realtime-updates.centered(style='height: 112px')
+              .col-md-8
+                .panel.panel-white(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 World Map
+                    .panel-ctrls.button-icon-bg(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-colorpicker='', data-action-refresh-demo='{"type": "circular"}')
+                  .panel-body
+                    #worldmap.mt-sm.mb-sm(style='height: 272px; width: 100%;')
+        // .container-fluid
+      // #page-content
+    footer(role='contentinfo')
+      .clearfix
+        ul.list-unstyled.list-inline.pull-left
+          li
+            h6(style='margin: 0;') © 2017 VoidMing.org
+        button#back-to-top.pull-right.btn.btn-link.btn-xs.hidden-print
+          i.ti.ti-arrow-up
+//- script(type='text/javascript', src='assets/js/application.js')
+script(type='text/javascript', src='assets/demo/demo.js')
+script(type='text/javascript', src='assets/demo/demo-switcher.js')
+script(type='text/javascript', src='assets/plugins/charts-flot/jquery.flot.min.js')
+// Flot Main File
+script(type='text/javascript', src='assets/plugins/charts-flot/jquery.flot.pie.min.js')
+// Flot Pie Chart Plugin
+script(type='text/javascript', src='assets/plugins/charts-flot/jquery.flot.stack.min.js')
+// Flot Stacked Charts Plugin
+script(type='text/javascript', src='assets/plugins/charts-flot/jquery.flot.orderBars.min.js')
+// Flot Ordered Bars Plugin
+script(type='text/javascript', src='assets/plugins/charts-flot/jquery.flot.resize.min.js')
+// Flot Responsive
+script(type='text/javascript', src='assets/plugins/charts-flot/jquery.flot.tooltip.min.js')
+// Flot Tooltips
+script(type='text/javascript', src='assets/plugins/charts-flot/jquery.flot.spline.js')
+// Flot Curved Lines
+script(type='text/javascript', src='assets/plugins/sparklines/jquery.sparklines.min.js')
+// Sparkline
+script(type='text/javascript', src='assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js')
+// jVectorMap
+script(type='text/javascript', src='assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')
+// jVectorMap
+script(type='text/javascript', src='assets/plugins/switchery/switchery.js')
+// Switchery
+script(type='text/javascript', src='assets/plugins/easypiechart/jquery.easypiechart.js')
+script(type='text/javascript', src='assets/plugins/fullcalendar/moment.min.js')
+// Moment.js Dependency
+script(type='text/javascript', src='assets/plugins/fullcalendar/fullcalendar.min.js')
+// Calendar Plugin
+script(type='text/javascript', src='assets/demo/demo-index.js')

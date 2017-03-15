@@ -19,48 +19,51 @@ html.coming-soon(lang='pt-BR')
       link(type='text/css', href='assets/css/ie8.css', rel='stylesheet')
       script(type='text/javascript', src='http://html5shim.googlecode.com/svn/trunk/html5.js')
     // The following CSS are included as plugins and can be removed if unused
-  body.focused-form.animated-content
+    
+body.focused-form.animated-content
     #registration-form.container
-      a.login-logo(href='index.html')
+      a.login-logo(href='/')
         img(src='assets/img/logo-big.png' width='50px')
       .row
         .col-md-6.col-md-offset-3
           .panel.panel-default
             .panel-heading
-              h2 Registration Form
+              h2 Registrar-se
             .panel-body
-              form.form-horizontal(action='')
+              form.form-horizontal(action="/register",method="post")
                 .form-group.mb-md
-                  label.col-xs-4.control-label(for='FullName') Full Name
+                  label.col-xs-4.control-label(for='FullName') Nome completo
                   .col-xs-8
-                    input#FulltName.form-control(type='text', name='FullName', placeholder='Full Name', required='')
+                    input#FulltName.form-control(type='text', name='FullName', placeholder='Nome completo', required='')
                 .form-group.mb-md
                   label.col-xs-4.control-label(for='Username') Username
                   .col-xs-8
-                    input#Username.form-control(type='text', name='Username', placeholder='Username', required='')
+                    input#Username.form-control(type='text', name='username', placeholder='Username', required='')
                 .form-group.mb-md
-                  label.col-xs-4.control-label(for='Email') Email
+                  label.col-xs-4.control-label(for='Email') E-mail
                   .col-xs-8
-                    input#Email.form-control(type='text', name='Email', placeholder='Email', required='')
+                    input#Email.form-control(type='text', name='Email', placeholder='E-mail', required='')
                 .form-group.mb-md
-                  label.col-xs-4.control-label(for='Password') Password
+                  label.col-xs-4.control-label(for='Password') Senha
                   .col-xs-8
-                    input#Password.form-control(type='password', name='Password', placeholder='Password', required='')
+                    input#Password.form-control(type='password', name='password', placeholder='Senha', required='')
                 .form-group.mb-md
-                  label.col-xs-4.control-label(for='ConfirmPassword') Confirm
+                  label.col-xs-4.control-label(for='ConfirmPassword') Confirme senha
                   .col-xs-8
-                    input#ConfirmPassword.form-control(type='password', name='ConfirmPassword', placeholder='Confirm Password', required='')
+                    input#ConfirmPassword.form-control(type='password', name='ConfirmPassword', placeholder='Confirme senha', required='')
                 .form-group.mb-n
                   .col-xs-12
                     .checkbox.icheck
                       label(for='')
                         input(type='checkbox')
-                        |  I accept the 
-                        a(href='#') user agreement
-            .panel-footer
-              .clearfix
-                a.btn.btn-default.pull-left(href='extras-login.html') Already Registered? Login
-                a.btn.btn-primary.pull-right(href='extras-registration.html') Register
+                        |  Eu aceito 
+                        a(href='#') termos de uso
+                .panel-footer
+                  .clearfix
+                    a.btn.btn-default.pull-left(href='/login') Já tem um login?
+                    a.btn.btn-primary.pull-right
+                        input.btn.btn-primary.pull-right(type="submit", value="Register")
+  
     // Load site level scripts
     //
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -94,3 +97,4 @@ html.coming-soon(lang='pt-BR')
     // End loading site level scripts
     // Load page level scripts
     // End loading page level scripts
+

@@ -14,12 +14,6 @@
 # [START app_yaml]
 runtime: nodejs
 env: flex
-resources:
-cpu: 1
-memory_gb:0.6
-disk_size_gb: 10
-volumes:
-- name: ramdisk1
-  volume_type: tmpfs
-  size_gb: 0.5
+beta_settings:
+  machine_type: f1-micro
 # [END app_yaml]

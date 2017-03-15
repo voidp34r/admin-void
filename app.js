@@ -1,85 +1,55 @@
-// Copyright 2015-2016, Google, Inc.
-// [START app]
-'use strict';
-
-// [START setup]
 var express = require('express');
 var path = require('path');
+var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session = require('cookie-session');
 var bodyParser = require('body-parser');
-// development only
 
-// var Mongoose = require('mongoose');
-// var db = Mongoose.createConnection('mongodb://localhost:27017/local');
-// var LinksSchema = require('./models/Link.js').LinksSchema;
-// var Link = db.model('Link', LinksSchema, 'links');
-
-// db.on('error', console.error.bind(console, 'connection error: '));
-// db.once('open', function() {
-
-// console.log('Estamos Conectado /,,,/');
-
-// });
-
-// var MongoClient = require('mongodb').MongoClient
-//   , assert = require('assert');
- 
-// Connection URL 
-// var url = 'mongodb://localhost:27017/test';
-// Use connect method to connect to the Server 
-// MongoClient.connect(url, function(err, db) {
-//   assert.equal(null, err);
-//   console.log("Conectado ao Mongo! :P veja esses dados:");
-//   console.log("");
-//   console.log(db);
-//   db.close();
-// });
-
-
-// var MongoClient = require('mongodb').MongoClient
-//       , assert = require('assert');
-//     var url = 'mongodb://localhost:27017/test';
-//     MongoClient.connect(url, function(err, db) {
-//       assert.equal(null, err);
-//       createCapped(db, function() {
-//         db.close();
-//       });
-//     });
-
-//     var createCapped = function(db, callback) {
-//       db.createCollection("init1", { "capped": true, "size": 100000, "max": 5000},
-//         function(err, results) {
-//           console.log("Init1 Collection Criada!!! /,,,/");
-//           callback();
-//         }
-//       );
-//     };
+var mongoose = require('mongoose');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 
 var app = express();
-app.enable('trust proxy');
-// [END setup]
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+// uncomment after placing your favicon in /public
+//app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+app.use(session({keys: ['secretkey1', 'secretkey2', '...']}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
-app.use('/cmd', require('./routes/cmd'));
-app.use('/cmdi', require('./routes/index'));
+// Configure passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
+// Configure passport-local to use account model for authentication
+var Account = require('./models/account');
+passport.use(new LocalStrategy(Account.authenticate()));
+
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
+
+// Connect mongoose
+mongoose.connect('mongodb://localhost/passport_local_mongoose_examples', function(err) {
+  if (err) {
+    console.log('Could not connect to mongodb on localhost. Ensure that you have mongodb running on localhost and mongodb accepts connections on standard ports!');
+  }
+});
+
+// Register routes
+app.use('/', require('./routes/routes'));
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  require('./routes/index');
-  var err = new Error('Nâo achamos nada sobre sua requisão!!!');
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
@@ -89,7 +59,7 @@ app.use(function (req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function (err, req, res) {
+  app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
@@ -100,13 +70,13 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function (err, req, res) {
+app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
     error: {}
   });
 });
-// [END app]
+
 
 module.exports = app;

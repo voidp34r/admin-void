@@ -1,10 +1,13 @@
 var passport = require('passport');
-var Account = require('./models/account');
+var Account = require('../models/account');
 var router = require('express').Router();
 
 router.get('/', function(req, res) {
-  console.log(req.user);
-  res.render('index', {user: req.user});
+  if (req.user != null) {
+    res.render('index', {user: req.user});
+  } else {
+    res.render('login', {user: req.user});
+  }
 });
 
 router.get('/register', function(req, res) {
