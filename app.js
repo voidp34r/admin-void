@@ -37,9 +37,9 @@ passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
-var db_void = function function_name(argument) {
+var db_void = function () {
   // var db = mongoose.createConnection('mongodb://root:FRcfa2Jh@104.155.167.71:27017/test', function(err) {
-  var db = mongoose.createConnection('mongodb://admin:akuma@localhost:27017/test', function(err) {
+  var db = mongoose.createConnection('mongodb://104.155.167.71:27017/test', function(err) {
     
     if (err) {
       console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina remota.');
