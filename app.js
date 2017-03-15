@@ -39,19 +39,20 @@ passport.deserializeUser(Account.deserializeUser());
 
 var db_void = function function_name(argument) {
   // var db = mongoose.createConnection('mongodb://root:FRcfa2Jh@104.155.167.71:27017/test', function(err) {
-  var db = mongoose.createConnection('mongodb://admin:akuma@104.155.167.71:27017/test', function(err) {
+  var db = mongoose.createConnection('mongodb://admin:akuma@localhost:27017/test', function(err) {
+    
     if (err) {
       console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina remota.');
     }
-    mongoose.connect('mongodb://localhost/test', function(err) {
-      console.log('Já que o banco de dados remoto não funciona vamos tentar com o local mesmo :P');
-      if (err) {
-        console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina local.....');
-        console.log('Realmente temos um problema! :(');
-      } else {
-        console.log(':P Bando de dados local Conectado!');
-      }
-    });
+    // mongoose.connect('mongodb://localhost/test', function(err) {
+    //   console.log('Já que o banco de dados remoto não funciona vamos tentar com o local mesmo :P');
+    //   if (err) {
+    //     console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina local.....');
+    //     console.log('Realmente temos um problema! :(');
+    //   } else {
+    //     console.log(':P Bando de dados local Conectado!');
+    //   }
+    // });
   });
 }
 console.log('Iniciando testes');
