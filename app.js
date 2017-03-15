@@ -38,7 +38,7 @@ passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 // Connect mongoose
-mongoose.connect('mongodb://localhost/test', function(err) {
+mongoose.connect('mongodb://35.184.5.60/test', function(err) {
   if (err) {
     console.log('Could not connect to mongodb on localhost. Ensure that you have mongodb running on localhost and mongodb accepts connections on standard ports!');
   }
