@@ -15,7 +15,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
+[]
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
@@ -37,26 +37,27 @@ passport.use(new LocalStrategy(Account.authenticate()));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
-var db_void = function () {
-  // var db = mongoose.createConnection('mongodb://root:FRcfa2Jh@104.155.167.71:27017/test', function(err) {
-  var db = mongoose.createConnection('mongodb://104.155.167.71:27017/test', function(err) {
-    
-    if (err) {
-      console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina remota.');
-    }
-    // mongoose.connect('mongodb://localhost/test', function(err) {
-    //   console.log('Já que o banco de dados remoto não funciona vamos tentar com o local mesmo :P');
-    //   if (err) {
-    //     console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina local.....');
-    //     console.log('Realmente temos um problema! :(');
-    //   } else {
-    //     console.log(':P Bando de dados local Conectado!');
-    //   }
-    // });
-  });
-}
-console.log('Iniciando testes');
-db_void();
+var db = mongoose.connect('mongodb://voidp34r:akuma@ds145848.mlab.com:45848/voidpear', function(err) {
+  if (err) {
+    console.log(err.ok);
+    console.log(err.code);
+    console.log(err.errmsg);
+    console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina remota.');
+  }
+});
+
+// var db_local = mongoose.connect('mongodb://localhost/test', function(err) {
+//   console.log('Já que o banco de dados remoto não funciona vamos tentar com o local mesmo :P');
+//   if (err) {
+//     console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina local.....');
+//     console.log('Realmente temos um problema! :(');
+//   } else {
+//     console.log(':P Bando de dados local Conectado!');
+//   }
+// });
+  
+// console.log(db);
+
 
 // Connect mongoose
 // mongodb://USER:PASSWORD@localhost/DATABASE
