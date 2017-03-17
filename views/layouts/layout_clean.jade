@@ -1,0 +1,87 @@
+
+include ../core/head 
+
+body.horizontal-nav.animated-content
+  if (user)
+  include ../core/navbar_user
+
+    //- if (!user)
+    //-   ul.nav.navbar-nav.toolbar.pull-right
+    //-     li.dropdown.toolbar-icon-bg
+    //-       a(href='/login')
+    //-         i.ti.ti-user
+    //-           span login
+  nav#headernav.navbar.navbar-inverse(role='navigation')
+    .navbar-header
+      if (!user)
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#horizontal-navbar')
+        i.ti.ti-menu
+    #horizontal-navbar.collapse.navbar-collapse.large-icons-nav
+      ul.nav.navbar-nav.smart-menu
+        li.active
+          a(href='index.html')
+            i.ti.ti-home
+            span Dashboard
+      if (user)
+        li
+          a(href='index.html')
+            i.ti.ti-layout-grid3
+            span Layout
+        li
+          a(href='index.html')
+            i.ti.ti-user
+            span Members
+        li
+          a(href='index.html')
+            i.ti.ti-pencil
+            span Components
+        li.dropdown
+          a.dropdown-toggle(href='#')
+            i.ti.ti-settings
+            span
+              | Settings 
+              i.fa.fa-angle-down
+          ul.dropdown-menu
+            li
+              a(href='#') Menu Item 1
+            li
+              a(href='#') Menu Item 2
+            li
+              a(href='#') Menu Item 3
+            li
+              a(href='#') Menu Item 4
+      if (!user)
+        li
+          a(href='index.html')
+            i.ti.ti-layout-grid3
+            span Layout
+  .static-content-wrapper
+    .static-content
+      .page-content
+        ol.breadcrumb
+          li
+            a(href='index.html') Home
+        .container-fluid
+          div(data-widget-group='group1')
+            .row
+              .col-md-12
+                block content
+                .panel.panel-default(data-widget='{"draggable": "false"}')
+                  .panel-heading
+                    h2 Matheus Rafael.com
+                    .panel-ctrls(data-actions-container='', data-action-collapse='{"target": ".panel-body"}')
+                  .panel-body
+                    p.m-n
+                      | Vamos começar os trabalhos
+        // .container-fluid
+      // #page-content
+footer(role='contentinfo')
+  .clearfix
+    ul.list-unstyled.list-inline.pull-left
+      li
+        h6(style='margin: 0;') ® Matheus Rafael </>  + layoutcode 2017 Voidming.org  ©
+    button#back-to-top.pull-right.btn.btn-link.btn-xs.hidden-print
+      i.ti.ti-arrow-up
+
+if (user)
+  include ../tools/theme_color

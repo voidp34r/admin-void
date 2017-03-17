@@ -1,6 +1,17 @@
 extends layout
 
+include core/head
+
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+div(data-widget-group='group3')
+  .row
+    .col-md-12
+      .panel.panel-default(data-widget='{"draggable": "false"}')
+        .panel-heading
+          h1= message
+          .panel-ctrls(data-actions-container='', data-action-collapse='{"target": ".panel-body"}')
+        .panel-body
+          p.m-n
+          h2= error.status
+          a.btn.btn-primary(href='/login') login
+          pre #{error.stack}

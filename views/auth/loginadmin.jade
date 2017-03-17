@@ -1,0 +1,45 @@
+extends layout
+
+body.focused-form.animated-content
+  #login-form.container
+    a.login-logo(href='/')
+      img(src='images/logo_127x127.png' width='50px')
+    .row
+      .col-md-4.col-md-offset-4
+        .panel.panel-default
+          .panel-heading
+            h2 Login
+          .panel-body
+            form#validate-form.form-horizontal(action='/loginadmin', method='post')
+              .form-group.mb-md
+                .col-xs-12
+                  .input-group
+                    span.input-group-addon
+                      i.ti.ti-user
+                    input.form-control(type='text', name='username', placeholder='Username', data-parsley-minlength='6', required='')
+              .form-group.mb-md
+                .col-xs-12
+                  .input-group
+                    span.input-group-addon
+                      i.ti.ti-key
+                    input#exampleInputPassword1.form-control(type='password',name='password', placeholder='Password')
+              .form-group.mb-n
+                .col-xs-12
+                  a.pull-left(href='/recover') Esqueceu a senha?
+                  .checkbox-inline.icheck.pull-right.p-n
+                    label(for='')
+                      input(type='checkbox')
+                      |                       Lembrar-me
+              .panel-footer
+                .clearfix
+                  p  Não se registrou ainda?
+                  a.btn.btn-default.pull-left(href='/register') Registrar
+                  a(href='#')
+                    input.btn.btn-primary.pull-right(type='submit', value='Login') 
+        .text-center
+          a.btn.btn-label.btn-social.btn-facebook.mb-md(href='#')
+            i.ti.ti-facebook
+            | Conectar com Facebook
+          a.btn.btn-label.btn-social.btn-twitter.mb-md(href='#')
+            i.ti.ti-twitter
+            | Conectar com Twitter

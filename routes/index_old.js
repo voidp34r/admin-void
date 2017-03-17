@@ -1,4 +1,3 @@
-// Copyright 2015-2016, Google, Inc.
 'use strict';
 
 var express = require('express');

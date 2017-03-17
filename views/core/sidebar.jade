@@ -1,0 +1,243 @@
+header#topnav.navbar.navbar-default.navbar-fixed-top(role='banner')
+      .logo-area
+        span#trigger-sidebar.toolbar-trigger.toolbar-icon-bg
+          a(data-toggle='tooltips', data-placement='right', title='Toggle Sidebar')
+            span.icon-bg
+              i.ti.ti-menu
+        a.navbar-brand(href='#') Void P34r
+        #toolbar-search.toolbar-icon-bg.hidden-xs
+          .input-group
+            span.input-group-btn
+              button.btn(type='button')
+                i.ti.ti-search
+            input.form-control(type='text', placeholder='Buscar...')
+            span.input-group-btn
+              button.btn(type='button')
+                i.ti.ti-close
+      // logo-area
+      ul.nav.navbar-nav.toolbar.pull-right
+        li#trigger-toolbar-search.toolbar-icon-bg.visible-xs-block
+          a(href='#')
+            span.icon-bg
+              i.ti.ti-search
+        li.toolbar-icon-bg.hidden-xs
+          a(href='#')
+            span.icon-bg
+              i.ti.ti-world
+        li.toolbar-icon-bg.hidden-xs
+          a(href='#')
+            span.icon-bg
+              i.ti.ti-view-grid
+        li#trigger-fullscreen.toolbar-icon-bg.hidden-xs
+          a.toggle-fullscreen(href='#')
+            span.icon-bg
+              i.ti.ti-fullscreen
+        li.dropdown.toolbar-icon-bg.hidden-xs
+          a.hasnotifications.dropdown-toggle(href='#', data-toggle='dropdown')
+            span.icon-bg
+              i.ti.ti-email
+            span.badge.badge-deeporange 2
+          .dropdown-menu.notifications.arrow
+            .topnav-dropdown-header
+              span Mensagens
+            .scroll-pane
+              ul.media-list.scroll-content
+                li.media.notification-message
+                  a(href='#')
+                    .media-left
+                      img.img-circle.avatar(src='/images/user_160x160.jpg', alt='')
+                    .media-body
+                      h4.notification-heading
+                        strong Void P34r
+                        span.text-gray ‒ Impemente deep learning...
+                      span.notification-time 2 minutos atrás
+                li.media.notification-message
+                  a(href='#')
+                    .media-left
+                      img.img-circle.avatar(src='/images/user_160x160.jpg', alt='')
+                    .media-body
+                      h4.notification-heading
+                        strong Void P34r
+                        span.text-gray ‒ Implemente IA...
+                      span.notification-time 40 minutos atrás
+                li.media.notification-message
+                  a(href='#')
+                    .media-left
+                      img.img-circle.avatar(src='/images/user_160x160.jpg', alt='')
+                    .media-body
+                      h4.notification-heading
+                        strong Void P34r
+                        span.text-gray ‒ Implemente Machine Learning...
+                      span.notification-time 9 horas atrás
+                li.media.notification-message
+                  a(href='#')
+                    .media-left
+                      img.img-circle.avatar(src='/images/user_160x160.jpg', alt='')
+                    .media-body
+                      h4.notification-heading
+                        strong Void P34r
+                        span.text-gray ‒ Implemente o AngularJS...
+                      span.notification-time 3 dias atrás
+                li.media.notification-message
+                  a(href='#')
+                    .media-left
+                      img.img-circle.avatar(src='/images/user_160x160.jpg', alt='')
+                    .media-body
+                      h4.notification-heading
+                        strong Void P34r
+                        span.text-gray ‒ Crie um layout bacana ...
+                      span.notification-time 5 dias atrás
+                li.media.notification-message
+                  a(href='#')
+                    .media-left
+                      img.img-circle.avatar(src='/images/user_160x160.jpg', alt='')
+                    .media-body
+                      h4.notification-heading
+                        strong Void P34r
+                        span.text-gray ‒ Crie modelo de DB ...
+                      span.notification-time 7 dias atrás
+                li.media.notification-message
+                  a(href='#')
+                    .media-left
+                      img.img-circle.avatar(src='/images/user_160x160.jpg', alt='')
+                    .media-body
+                      h4.notification-heading
+                        strong Void P34r
+                        span.text-gray ‒ Idéia pra projeto novo...
+                      span.notification-time 8 dias atrás
+            .topnav-dropdown-footer
+              a(href='#') Todas as mensagens
+        li.dropdown.toolbar-icon-bg
+          a.hasnotifications.dropdown-toggle(href='#', data-toggle='dropdown')
+            span.icon-bg
+              i.ti.ti-bell
+            span.badge.badge-deeporange 2
+          .dropdown-menu.notifications.arrow
+            .topnav-dropdown-header
+              span Notificações
+            .scroll-pane
+              ul.media-list.scroll-content
+                li.media.notification-success
+                  a(href='#')
+                    .media-left
+                      span.notification-icon
+                        i.ti.ti-check
+                    .media-body
+                      h4.notification-heading Implementar AngularJS
+                      span.notification-time 8 minutos atrás
+                li.media.notification-info
+                  a(href='#')
+                    .media-left
+                      span.notification-icon
+                        i.ti.ti-check
+                    .media-body
+                      h4.notification-heading Criar modelos de layout
+                      span.notification-time 3 dias atrás
+                li.media.notification-teal
+                  a(href='#')
+                    .media-left
+                      span.notification-icon
+                        i.ti.ti-check
+                    .media-body
+                      h4.notification-heading Criar modelos de banco de dados
+                      span.notification-time 5 dias atrás
+                li.media.notification-indigo
+                  a(href='#')
+                    .media-left
+                      span.notification-icon
+                        i.ti.ti-check
+                    .media-body
+                      h4.notification-heading Criar ambiente de desenvolvimento
+                      span.notification-time 7 dias atrás
+                li.media.notification-danger
+                  a(href='#')
+                    .media-left
+                      span.notification-icon
+                        i.ti.ti-arrow-up
+                    .media-body
+                      h4.notification-heading Iniciação de Projeto beta 1.0
+                      span.notification-time 8 dias atrás
+            .topnav-dropdown-footer
+              a(href='#') Todas Notificações
+        li.dropdown.toolbar-icon-bg
+          a.dropdown-toggle.username(href='#', data-toggle='dropdown')
+            img.img-circle(src='/images/user_160x160.jpg', alt='')
+          ul.dropdown-menu.userinfo.arrow
+            li
+              a(href='#/')
+                i.ti.ti-user
+                span Perfil
+                span.badge.badge-info.pull-right ^^
+            li
+              a(href='#/')
+                i.ti.ti-panel
+                span Conta
+            li
+              a(href='#/')
+                i.ti.ti-settings
+                span Configurações
+            li.divider
+            //- li
+            //-   a(href='#/')
+            //-     i.ti.ti-stats-up
+            //-     span Earnings
+            //- li
+            //-   a(href='#/')
+            //-     i.ti.ti-view-list-alt
+            //-     span Statement
+            //- li
+            //-   a(href='#/')
+            //-     i.ti.ti-money
+            //-     span Withdrawals
+            li.divider
+            li
+              a(href='/logout')
+                i.ti.ti-shift-right
+                span Sair | logout
+body.animated-content
+  #wrapper
+    #layout-static
+      .static-sidebar-wrapper.sidebar-default
+        .static-sidebar
+          .sidebar
+            .widget
+              .widget-body
+                .userinfo
+                  .avatar
+                    img.img-responsive.img-circle(src='/images/user_160x160.jpg')
+                  .info
+                    span.user #{user}
+                    p 
+                    //- | #{user._id}
+                    //- | #{user}
+                    //- | #{user.__v}
+                    //- span.useremail #{user.email}
+              #widget-sidebar.widget.stay-on-collapse
+                nav.widget-body(role='navigation')
+                  ul.acc-menu
+                    li.nav-separator
+                      span Explore
+                    li
+                      a(href='#')
+                        i.ti.ti-home
+                        span Dashboard
+                        span.badge.badge-teal 2
+                    li
+                      a(href='#')
+                        i.ti.ti-shield
+                        span Segurança
+                    li
+                      a(href='javascript:;')
+                        i.ti.ti-layout
+                        span Web
+                      ul.acc-menu
+                        li
+                          a(href='layout-grids.html') Web 01
+                        li
+                          a(href='layout-static-leftbar.html') Web 02
+                        li
+                          a(href='layout-sidebar-scroll.html') Web 03
+                        li
+                          a(href='layout-horizontal.html') Web 04
+                        li
+                          a(href='layout-boxed.html') Web 05
