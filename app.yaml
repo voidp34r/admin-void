@@ -5,7 +5,7 @@ api_version: 1
 # f1-micro target
 resources:
   cpu: .5
-  memory_gb: .9
+  memory_gb: .6
   disk_size_gb: 10
 
 # can't use min instance 0 with auto scaling...
