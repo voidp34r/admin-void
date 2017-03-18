@@ -1,0 +1,825 @@
+
+#wrapper
+  #layout-static
+    .static-sidebar-wrapper.sidebar-default
+      .static-sidebar
+        .sidebar
+          .widget
+            .widget-body
+              .userinfo
+                .avatar
+                  img.img-responsive.img-circle(src='/images/user_160x160.jpg')
+                .info
+                  span.username Matheus Rafael
+                  p
+                    span.useremail matheus@matheusr.com
+        if(user)
+          #widget-sidebar.widget.stay-on-collapse
+            nav.widget-body(role='navigation')
+              ul.acc-menu
+                li.nav-separator
+                  span Explore
+                li
+                  a(href='index.html')
+                    i.ti.ti-home
+                    span Dashboard
+                    span.badge.badge-teal 2
+                li
+                  a(href='angular/app/')
+                    i.ti.ti-shield
+                    span AngularJS
+                li
+                  a(href='javascript:;')
+                    i.ti.ti-layout
+                    span Layout
+                  ul.acc-menu
+                    li
+                      a(href='layout-grids.html') Grid Scaffolding
+                    li
+                      a(href='layout-static-leftbar.html') Static Sidebar
+                    li
+                      a(href='layout-sidebar-scroll.html') Scroll Sidebar
+                    li
+                      a(href='layout-horizontal.html') Horizontal Nav
+                    li
+                      a(href='layout-boxed.html') Boxed
+                li
+                  a(href='javascript:;')
+                    i.ti.ti-view-list-alt
+                    span UI Kit
+                  ul.acc-menu
+                    li
+                      a(href='ui-typography.html') Typography
+                    li
+                      a(href='ui-buttons.html') Buttons
+                    li
+                      a(href='ui-modals.html') Modal
+                    li
+                      a(href='ui-progress.html') Progress
+                    li
+                      a(href='ui-paginations.html') Paginations
+                    li
+                      a(href='ui-breadcrumbs.html') Breadcrumbs
+                    li
+                      a(href='ui-labelsbadges.html') Labels & Badges
+                    li
+                      a(href='ui-alerts.html') Alerts
+                    li
+                      a(href='ui-tabs.html') Tabs
+                    li
+                      a(href='ui-wells.html') Wells
+                    li
+                      a(href='ui-icons-fontawesome.html') FontAwesome Icons
+                    li
+                      a(href='ui-icons-themify.html') Themify Icons
+                    li
+                      a(href='ui-helpers.html') Helpers
+                    li
+                      a(href='ui-imagecarousel.html') Images & Carousel
+                li
+                  a(href='javascript:;')
+                    i.ti.ti-control-shuffle
+                    span Components
+                  ul.acc-menu
+                    li
+                      a(href='ui-tiles.html') Tiles
+                    li
+                      a(href='custom-skylo.html') Page Progress
+                    li
+                      a(href='custom-bootbox.html') Bootbox
+                    li
+                      a(href='custom-pines.html') Pines Notification
+                    li
+                      a(href='custom-pulsate.html') Pulsate
+                    li
+                      a(href='custom-knob.html') jQuery Knob
+                    li
+                      a(href='custom-ionrange.html') Ion Range Slider
+                li
+                  a(href='javascript:;')
+                    i.ti.ti-pencil
+                    span Forms
+                  ul.acc-menu
+                    li
+                      a(href='ui-forms.html') Form Layout
+                    li
+                      a(href='form-components.html') Form Components
+                    li
+                      a(href='form-pickers.html') Pickers
+                    li
+                      a(href='form-wizard.html') Form Wizard
+                    li
+                      a(href='form-validation.html') Form Validation
+                    li
+                      a(href='form-masks.html') Form Masks
+                    li
+                      a(href='form-dropzone.html') Dropzone Uploader
+                    li
+                      a(href='form-summernote.html') Summernote
+                    li
+                      a(href='form-markdown.html') Markdown Editor
+                    li
+                      a(href='form-xeditable.html') Inline Editor
+                    li
+                      a(href='form-gridforms.html') Grid Forms
+                li
+                  a(href='javascript:;')
+                    i.ti.ti-settings
+                    span Panels
+                  ul.acc-menu
+                    li
+                      a(href='ui-panels.html') Panels
+                    li
+                      a(href='ui-advancedpanels.html') Draggable Panels
+                li
+                  a(href='javascript:;')
+                    i.ti.ti-layout-grid3
+                    span Tables
+                  ul.acc-menu
+                    li
+                      a(href='ui-tables.html') Basic Tables
+                    li
+                      a(href='tables-responsive.html') Responsive Tables
+                    li
+                      a(href='tables-editable.html') Editable Tables
+                    li
+                      a(href='tables-data.html') Data Tables
+                    li
+                      a(href='tables-fixedheader.html') Fixed Header Tables
+                li
+                  a(href='javascript:;')
+                    i.ti.ti-stats-up
+                    span Analytics
+                  ul.acc-menu
+                    li
+                      a(href='charts-flot.html') Flot
+                    li
+                      a(href='charts-sparklines.html') Sparklines
+                    li
+                      a(href='charts-morris.html') Morris.js
+                    li
+                      a(href='charts-easypiechart.html') Easy Pie Chart
+                li
+                  a(href='javascript:;')
+                    i.ti.ti-map-alt
+                    span Maps
+                  ul.acc-menu
+                    li
+                      a(href='maps-google.html') Google Maps
+                    li
+                      a(href='maps-jvectormap.html') jVectorMap
+                    li
+                      a(href='maps-mapael.html') Mapael
+                li
+                  a(href='javascript:;')
+                    i.ti.ti-file
+                    span Pages
+                  ul.acc-menu
+                    li
+                      a(href='extras-profile.html') Profile
+                    li
+                      a(href='extras-invoice.html') Invoice
+                    li
+                      a(href='javascript:;') Email Templates
+                      ul.acc-menu
+                        li
+                          a(href='responsive-email/basic.html') Basic
+                        li
+                          a(href='responsive-email/hero.html') Hero
+                        li
+                          a(href='responsive-email/sidebar.html') Sidebar
+                        li
+                          a(href='responsive-email/sidebar-hero.html') Sidebar Hero
+                    li
+                      a(href='coming-soon.html') Coming Soon
+                    li
+                      a(href='extras-faq.html') FAQ
+                    li
+                      a(href='extras-registration.html') Registration
+                    li
+                      a(href='extras-forgotpassword.html') Password Reset
+                    li
+                      a(href='extras-login.html') Login
+                    li
+                      a(href='extras-404.html') 404 Page
+                    li
+                      a(href='extras-500.html') 500 Page
+                li.nav-separator
+                  span Extras
+                li
+                  a(href='app-inbox.html')
+                    i.ti.ti-email
+                    span Inbox
+                    span.badge.badge-danger 3
+                li
+                  a(href='extras-calendar.html')
+                    i.ti.ti-calendar
+                    span Calendar
+                    span.badge.badge-orange 1
+          #widget-progress.widget
+            .widget-heading
+              | Progress
+            .widget-body
+              .mini-progressbar
+                .clearfix.mb-sm
+                  .pull-left Bandwidth
+                  .pull-right 50%
+                .progress
+                  .progress-bar.progress-bar-lime(style='width: 50%')
+              .mini-progressbar
+                .clearfix.mb-sm
+                  .pull-left Storage
+                  .pull-right 25%
+                .progress
+                  .progress-bar.progress-bar-info(style='width: 25%')
+    .static-content-wrapper
+      .static-content
+        .page-content
+          ol.breadcrumb
+            li
+              a(href='index.html') Home
+            li.active
+              a(href='profile.html') Profile
+          .container-fluid
+            div(data-widget-group='group1')
+              .row
+                .col-sm-3
+                  .panel.panel-profile
+                    .panel-body
+                      img.img-circle(src='/images/user_160x160.jpg')
+                      .name Matheus Rafael
+                      .info Software Enginner
+                      ul.list-inline.text-center
+                        li
+                          a.profile-linkedin-icon(href='#')
+                            i.ti.ti-linkedin
+                        li
+                          a.profile-twitter-icon(href='#')
+                            i.ti.ti-twitter
+                        li
+                          a.profile-facebook-icon(href='#')
+                            i.ti.ti-facebook
+                  // panel
+                  .list-group.list-group-alternate.mb-n.nav.nav-tabs
+                    a.list-group-item.active(href='#tab-about', role='tab', data-toggle='tab')
+                      i.ti.ti-user
+                      |  About 
+                      span.badge.badge-primary 80%
+                    a.list-group-item(href='#tab-timeline', role='tab', data-toggle='tab')
+                      i.ti.ti-time
+                      |  Timeline
+                    a.list-group-item(href='#tab-projects', role='tab', data-toggle='tab')
+                      i.ti.ti-view-list-alt
+                      |  Projects
+                    a.list-group-item(href='#tab-photos', role='tab', data-toggle='tab')
+                      i.ti.ti-view-grid
+                      |  Photos
+                    a.list-group-item(href='#tab-edit', role='tab', data-toggle='tab')
+                      i.ti.ti-pencil
+                      |  Edit
+                // col-sm-3
+                .col-sm-9
+                  .tab-content
+                    #tab-projects.tab-pane
+                      .panel.panel-default
+                        .panel-heading
+                          h2 Projects
+                        .panel-body
+                          .table-responsive
+                            table.table.m-n
+                              thead
+                                tr
+                                  th #
+                                  th Project Title
+                                  th Description
+                                  th Progress
+                              tbody
+                                tr
+                                  th(scope='row') 1.
+                                  td
+                                    strong Avenxo
+                                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                  td.vam
+                                    .progress.m-n
+                                      .progress-bar.progress-bar-success(style='width: 20%')
+                                tr
+                                  th(scope='row') 2.
+                                  td
+                                    strong Phoenix
+                                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                  td.vam
+                                    .progress.m-n
+                                      .progress-bar.progress-bar-success(style='width: 50%')
+                                tr
+                                  th(scope='row') 3.
+                                  td
+                                    strong Arvin
+                                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                  td.vam
+                                    .progress.m-n
+                                      .progress-bar.progress-bar-success(style='width: 10%')
+                                tr
+                                  th(scope='row') 4.
+                                  td
+                                    strong Flip3
+                                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                  td.vam
+                                    .progress.m-n
+                                      .progress-bar.progress-bar-success(style='width: 75%')
+                                tr
+                                  th(scope='row') 5.
+                                  td
+                                    strong Appboom
+                                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                  td.vam
+                                    .progress.m-n
+                                      .progress-bar.progress-bar-success(style='width: 25%')
+                                tr
+                                  th(scope='row') 6.
+                                  td
+                                    strong Xavant
+                                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                  td.vam
+                                    .progress.m-n
+                                      .progress-bar.progress-bar-success(style='width: 15%')
+                          // /.table-responsive
+                        // /.panel-body
+                    // #tab-projects
+                    #tab-about.tab-pane.active
+                      .panel.panel-default
+                        .panel-heading
+                          h2 About
+                        .panel-body
+                          .about-area
+                            h4 Bio
+                            p
+                              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores in eveniet sapiente error fuga tenetur ex ea dignissimos voluptas ab molestiae eos totam quo dolorem maxime illo neque quia itaque.
+                            p
+                              | Asperiores in eveniet sapiente error fuga tenetur ex ea dignissimos voluptas ab molestiae eos totam quo dolorem maxime illo neque quia itaque.
+                          .about-area
+                            h4 Basic Information
+                            .table-responsive
+                              table.table
+                                tbody
+                                  tr
+                                    th Web
+                                    td
+                                      a(href='#') www.johndoe.com
+                                  tr
+                                    th Email
+                                    td
+                                      a(href='#') doe@lime.com
+                                  tr
+                                    th Phone
+                                    td +61 3 8376 6284
+                                  tr
+                                    th Position
+                                    td Designer
+                                  tr
+                                    th Status
+                                    td Member
+                                  tr
+                                    th Social
+                                    td
+                                      ul.list-inline.m-n
+                                        li
+                                          a(href='#')
+                                            i.ti.ti-pinterest
+                                        li
+                                          a(href='#')
+                                            i.ti.ti-twitter
+                                        li
+                                          a(href='#')
+                                            i.ti.ti-google
+                                        li
+                                          a(href='#')
+                                            i.ti.ti-linkedin
+                                        li
+                                          a(href='#')
+                                            i.ti.ti-dribbble
+                                        li
+                                          a(href='#')
+                                            i.ti.ti-facebook
+                          .about-area
+                            h4 Personal Information
+                            .table-responsive
+                              table.table.about-table
+                                tbody
+                                  tr
+                                    th Full Name
+                                    td Jonathan Davison Smith
+                                  tr
+                                    th Birth Date
+                                    td 1 January
+                                  tr
+                                    th Birth Year
+                                    td 1980
+                                  tr
+                                    th Gender
+                                    td Male
+                                  tr
+                                    th Languages
+                                    td English
+                                  tr
+                                    th City
+                                    td Canbera
+                                  tr
+                                    th Country
+                                    td Australia
+                    #tab-timeline.tab-pane
+                      .panel
+                        .panel-heading
+                          h2 Timeline
+                        .panel-body
+                          .row
+                            .col-md-12
+                              ul.timeline
+                                li.timeline-primary
+                                  .timeline-icon
+                                    i.ti.ti-pencil
+                                  .timeline-body
+                                    .timeline-header
+                                      span.author
+                                        | Posted by 
+                                        a(href='#') David Tennant
+                                      span.date Monday, November 21, 2013
+                                    .timeline-content
+                                      h4 Consectetur Adipisicing Elit
+                                      p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, officiis, molestiae, deserunt asperiores architecto ut vel repudiandae dolore inventore nesciunt necessitatibus doloribus ratione facere consectetur suscipit!
+                                li.timeline-info
+                                  .timeline-icon
+                                    i.ti.ti-heart
+                                  .timeline-body
+                                    .timeline-header
+                                      span.author
+                                        | Posted by 
+                                        a(href='#') David Tennant
+                                      span.date Monday, November 21, 2013
+                                    .timeline-content
+                                      h4 Consectetur Adipisicing Elit
+                                      p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, officiis, molestiae, deserunt asperiores architecto ut vel repudiandae dolore inventore nesciunt necessitatibus doloribus ratione facere consectetur suscipit!
+                                li.timeline-warning
+                                  .timeline-icon
+                                    i.ti.ti-camera
+                                  .timeline-body
+                                    .timeline-header
+                                      span.author
+                                        | Posted by 
+                                        a(href='#') David Tennant
+                                      span.date Monday, November 21, 2013
+                                    .timeline-content
+                                      h4 Consectetur Adipisicing Elit
+                                      ul.list-inline
+                                        li
+                                          img.pull-left.img-thumbnail.img-responsive.clearfix(src='/images/user_160x160.jpg', alt='', width='200')
+                                        li
+                                          img.pull-left.img-thumbnail.img-responsive.clearfix(src='/images/user_160x160.jpg', alt='', width='200')
+                                li.timeline-danger
+                                  .timeline-icon
+                                    i.ti.ti-home
+                                  .timeline-body
+                                    .timeline-header
+                                      span.author
+                                        | Posted by 
+                                        a(href='#') David Tennant
+                                      span.date Monday, November 21, 2013
+                                    .timeline-content
+                                      h4 Consectetur Adipisicing Elit
+                                      p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, officiis, molestiae, deserunt asperiores architecto ut vel repudiandae dolore inventore nesciunt necessitatibus doloribus ratione facere consectetur suscipit!
+                    #tab-photos.tab-pane
+                      .panel
+                        .panel-heading
+                          h2 Photos
+                        .panel-body.profile-photos
+                          .row
+                            .col-md-3
+                              img.img-thumbnail.img-responsive.mb-xl(src='/images/user_160x160.jpg', alt='')
+                            .col-md-3
+                              img.img-thumbnail.img-responsive.mb-xl(src='/images/user_160x160.jpg', alt='')
+                            .col-md-3
+                              img.img-thumbnail.img-responsive.mb-xl(src='/images/user_160x160.jpg', alt='')
+                            .col-md-3
+                              img.img-thumbnail.img-responsive.mb-xl(src='/images/user_160x160.jpg', alt='')
+                          .row
+                            .col-md-3
+                              img.img-thumbnail.img-responsive.mb-xl(src='/images/user_160x160.jpg', alt='')
+                            .col-md-3
+                              img.img-thumbnail.img-responsive.mb-xl(src='/images/user_160x160.jpg', alt='')
+                            .col-md-3
+                              img.img-thumbnail.img-responsive.mb-xl(src='/images/user_160x160.jpg', alt='')
+                            .col-md-3
+                              img.img-thumbnail.img-responsive.mb-xl(src='/images/user_160x160.jpg', alt='')
+                    #tab-edit.tab-pane
+                      .panel
+                        .panel-heading
+                          h2 Edit
+                        .panel-body
+                          .row
+                            .col-md-12
+                              form.form-horizontal.tabular-form
+                                .form-group
+                                  label.col-sm-2.control-label(for='form-name') Name
+                                  .col-sm-8.tabular-border
+                                    input#form-name.form-control(type='text', placeholder='Full Name')
+                                .form-group
+                                  label.col-sm-2.control-label(for='form-website') Website
+                                  .col-sm-8.tabular-border
+                                    input#form-website.form-control(type='text', placeholder='http://')
+                                .form-group
+                                  label.col-sm-2.control-label(for='radio') Gender
+                                  .col-sm-8.tabular-border
+                                    .radio.block.icheck
+                                      label
+                                        input(type='radio', name='gender')
+                                        |  Male
+                                    .radio.block.icheck
+                                      label
+                                        input(type='radio', name='gender')
+                                        |  Female
+                                .form-group
+                                  label.col-sm-2.control-label(for='form-password') Password
+                                  .col-sm-8.tabular-border
+                                    input#form-password.form-control(type='password', placeholder='Password')
+                                .form-group
+                                  label.col-sm-2.control-label(for='form-confirmpass') Confrim Password
+                                  .col-sm-8.tabular-border
+                                    input#form-confirmpass.form-control(type='password', placeholder='Password')
+                                .form-group
+                                  label.col-sm-2.control-label(for='selector1') Country
+                                  .col-sm-8.tabular-border
+                                    select#selector1.form-control(name='selector1')
+                                      option(value='Afghanistan') Afghanistan
+                                      option(value='Åland_Islands') Åland Islands
+                                      option(value='Albania') Albania
+                                      option(value='Algeria') Algeria
+                                      option(value='American_Samoa') American Samoa
+                                      option(value='Andorra') Andorra
+                                      option(value='Angola') Angola
+                                      option(value='Anguilla') Anguilla
+                                      option(value='Antarctica') Antarctica
+                                      option(value='Antigua_And_Barbuda') Antigua and Barbuda
+                                      option(value='Argentina') Argentina
+                                      option(value='Armenia') Armenia
+                                      option(value='Aruba') Aruba
+                                      option(value='Australia') Australia
+                                      option(value='Austria') Austria
+                                      option(value='Azerbaijan') Azerbaijan
+                                      option(value='Bahamas') Bahamas
+                                      option(value='Bahrain') Bahrain
+                                      option(value='Bangladesh') Bangladesh
+                                      option(value='Barbados') Barbados
+                                      option(value='Belarus') Belarus
+                                      option(value='Belgium') Belgium
+                                      option(value='Belize') Belize
+                                      option(value='Benin') Benin
+                                      option(value='Bermuda') Bermuda
+                                      option(value='Bhutan') Bhutan
+                                      option(value='Bolivia') Bolivia
+                                      option(value='Bosnia_And_Herzegovina') Bosnia and Herzegovina
+                                      option(value='Botswana') Botswana
+                                      option(value='Bouvet_Island') Bouvet Island
+                                      option(value='Brazil') Brazil
+                                      option(value='British_Indian_Ocean_Territory') British Indian Ocean Territory
+                                      option(value='Brunei_Darussalam') Brunei Darussalam
+                                      option(value='Bulgaria') Bulgaria
+                                      option(value='Burkina_Faso') Burkina Faso
+                                      option(value='Burundi') Burundi
+                                      option(value='Cambodia') Cambodia
+                                      option(value='Cameroon') Cameroon
+                                      option(value='Canada') Canada
+                                      option(value='Cape_Verde') Cape Verde
+                                      option(value='Cayman_Islands') Cayman Islands
+                                      option(value='Central_African_Republic') Central African Republic
+                                      option(value='Chad') Chad
+                                      option(value='Chile') Chile
+                                      option(value='China') China
+                                      option(value='Christmas_Island') Christmas Island
+                                      option(value='Cocos_(Keeling)_Islands') Cocos (Keeling) Islands
+                                      option(value='Colombia') Colombia
+                                      option(value='Comoros') Comoros
+                                      option(value='Congo') Congo
+                                      option(value='Congo,_The_Democratic_Republic_Of_The') Congo, The Democratic Republic of The
+                                      option(value='Cook_Islands') Cook Islands
+                                      option(value='Costa_Rica') Costa Rica
+                                      option(value="Cote_D'ivoire") Cote D'ivoire
+                                      option(value='Croatia') Croatia
+                                      option(value='Cuba') Cuba
+                                      option(value='Cyprus') Cyprus
+                                      option(value='Czech_Republic') Czech Republic
+                                      option(value='Denmark') Denmark
+                                      option(value='Djibouti') Djibouti
+                                      option(value='Dominica') Dominica
+                                      option(value='Dominican_Republic') Dominican Republic
+                                      option(value='Ecuador') Ecuador
+                                      option(value='Egypt') Egypt
+                                      option(value='El_Salvador') El Salvador
+                                      option(value='Equatorial_Guinea') Equatorial Guinea
+                                      option(value='Eritrea') Eritrea
+                                      option(value='Estonia') Estonia
+                                      option(value='Ethiopia') Ethiopia
+                                      option(value='Falkland_Islands_(Malvinas)') Falkland Islands (Malvinas)
+                                      option(value='Faroe_Islands') Faroe Islands
+                                      option(value='Fiji') Fiji
+                                      option(value='Finland') Finland
+                                      option(value='France') France
+                                      option(value='French_Guiana') French Guiana
+                                      option(value='French_Polynesia') French Polynesia
+                                      option(value='French_Southern_Territories') French Southern Territories
+                                      option(value='Gabon') Gabon
+                                      option(value='Gambia') Gambia
+                                      option(value='Georgia') Georgia
+                                      option(value='Germany') Germany
+                                      option(value='Ghana') Ghana
+                                      option(value='Gibraltar') Gibraltar
+                                      option(value='Greece') Greece
+                                      option(value='Greenland') Greenland
+                                      option(value='Grenada') Grenada
+                                      option(value='Guadeloupe') Guadeloupe
+                                      option(value='Guam') Guam
+                                      option(value='Guatemala') Guatemala
+                                      option(value='Guernsey') Guernsey
+                                      option(value='Guinea') Guinea
+                                      option(value='Guinea-bissau') Guinea-bissau
+                                      option(value='Guyana') Guyana
+                                      option(value='Haiti') Haiti
+                                      option(value='Heard_Island_And_Mcdonald_Islands') Heard Island and Mcdonald Islands
+                                      option(value='Holy_See_(Vatican_City_State)') Holy See (Vatican City State)
+                                      option(value='Honduras') Honduras
+                                      option(value='Hong_Kong') Hong Kong
+                                      option(value='Hungary') Hungary
+                                      option(value='Iceland') Iceland
+                                      option(value='India') India
+                                      option(value='Indonesia') Indonesia
+                                      option(value='Iran,_Islamic_Republic_Of') Iran, Islamic Republic of
+                                      option(value='Iraq') Iraq
+                                      option(value='Ireland') Ireland
+                                      option(value='Isle_Of_Man') Isle of Man
+                                      option(value='Israel') Israel
+                                      option(value='Italy') Italy
+                                      option(value='Jamaica') Jamaica
+                                      option(value='Japan') Japan
+                                      option(value='Jersey') Jersey
+                                      option(value='Jordan') Jordan
+                                      option(value='Kazakhstan') Kazakhstan
+                                      option(value='Kenya') Kenya
+                                      option(value='Kiribati') Kiribati
+                                      option(value="Korea,_Democratic_People's_Republic_Of") Korea, Democratic People's Republic of
+                                      option(value='Korea,_Republic_Of') Korea, Republic of
+                                      option(value='Kuwait') Kuwait
+                                      option(value='Kyrgyzstan') Kyrgyzstan
+                                      option(value="Lao_People's_Democratic_Republic") Lao People's Democratic Republic
+                                      option(value='Latvia') Latvia
+                                      option(value='Lebanon') Lebanon
+                                      option(value='Lesotho') Lesotho
+                                      option(value='Liberia') Liberia
+                                      option(value='Libyan_Arab_Jamahiriya') Libyan Arab Jamahiriya
+                                      option(value='Liechtenstein') Liechtenstein
+                                      option(value='Lithuania') Lithuania
+                                      option(value='Luxembourg') Luxembourg
+                                      option(value='Macao') Macao
+                                      option(value='Macedonia,_The_Former_Yugoslav_Republic_Of') Macedonia, The Former Yugoslav Republic of
+                                      option(value='Madagascar') Madagascar
+                                      option(value='Malawi') Malawi
+                                      option(value='Malaysia') Malaysia
+                                      option(value='Maldives') Maldives
+                                      option(value='Mali') Mali
+                                      option(value='Malta') Malta
+                                      option(value='Marshall_Islands') Marshall Islands
+                                      option(value='Martinique') Martinique
+                                      option(value='Mauritania') Mauritania
+                                      option(value='Mauritius') Mauritius
+                                      option(value='Mayotte') Mayotte
+                                      option(value='Mexico') Mexico
+                                      option(value='Micronesia,_Federated_States_Of') Micronesia, Federated States of
+                                      option(value='Moldova,_Republic_Of') Moldova, Republic of
+                                      option(value='Monaco') Monaco
+                                      option(value='Mongolia') Mongolia
+                                      option(value='Montenegro') Montenegro
+                                      option(value='Montserrat') Montserrat
+                                      option(value='Morocco') Morocco
+                                      option(value='Mozambique') Mozambique
+                                      option(value='Myanmar') Myanmar
+                                      option(value='Namibia') Namibia
+                                      option(value='Nauru') Nauru
+                                      option(value='Nepal') Nepal
+                                      option(value='Netherlands') Netherlands
+                                      option(value='Netherlands_Antilles') Netherlands Antilles
+                                      option(value='New_Caledonia') New Caledonia
+                                      option(value='New_Zealand') New Zealand
+                                      option(value='Nicaragua') Nicaragua
+                                      option(value='Niger') Niger
+                                      option(value='Nigeria') Nigeria
+                                      option(value='Niue') Niue
+                                      option(value='Norfolk_Island') Norfolk Island
+                                      option(value='Northern_Mariana_Islands') Northern Mariana Islands
+                                      option(value='Norway') Norway
+                                      option(value='Oman') Oman
+                                      option(value='Pakistan') Pakistan
+                                      option(value='Palau') Palau
+                                      option(value='Palestinian_Territory,_Occupied') Palestinian Territory, Occupied
+                                      option(value='Panama') Panama
+                                      option(value='Papua_New_Guinea') Papua New Guinea
+                                      option(value='Paraguay') Paraguay
+                                      option(value='Peru') Peru
+                                      option(value='Philippines') Philippines
+                                      option(value='Pitcairn') Pitcairn
+                                      option(value='Poland') Poland
+                                      option(value='Portugal') Portugal
+                                      option(value='Puerto_Rico') Puerto Rico
+                                      option(value='Qatar') Qatar
+                                      option(value='Reunion') Reunion
+                                      option(value='Romania') Romania
+                                      option(value='Russian_Federation') Russian Federation
+                                      option(value='Rwanda') Rwanda
+                                      option(value='Saint_Helena') Saint Helena
+                                      option(value='Saint_Kitts_And_Nevis') Saint Kitts and Nevis
+                                      option(value='Saint_Lucia') Saint Lucia
+                                      option(value='Saint_Pierre_And_Miquelon') Saint Pierre and Miquelon
+                                      option(value='Saint_Vincent_And_The_Grenadines') Saint Vincent and The Grenadines
+                                      option(value='Samoa') Samoa
+                                      option(value='San_Marino') San Marino
+                                      option(value='Sao_Tome_And_Principe') Sao Tome and Principe
+                                      option(value='Saudi_Arabia') Saudi Arabia
+                                      option(value='Senegal') Senegal
+                                      option(value='Serbia') Serbia
+                                      option(value='Seychelles') Seychelles
+                                      option(value='Sierra_Leone') Sierra Leone
+                                      option(value='Singapore') Singapore
+                                      option(value='Slovakia') Slovakia
+                                      option(value='Slovenia') Slovenia
+                                      option(value='Solomon_Islands') Solomon Islands
+                                      option(value='Somalia') Somalia
+                                      option(value='South_Africa') South Africa
+                                      option(value='South_Georgia_And_The_South_Sandwich_Islands') South Georgia and The South Sandwich Islands
+                                      option(value='Spain') Spain
+                                      option(value='Sri_Lanka') Sri Lanka
+                                      option(value='Sudan') Sudan
+                                      option(value='Suriname') Suriname
+                                      option(value='Svalbard_And_Jan_Mayen') Svalbard and Jan Mayen
+                                      option(value='Swaziland') Swaziland
+                                      option(value='Sweden') Sweden
+                                      option(value='Switzerland') Switzerland
+                                      option(value='Syrian_Arab_Republic') Syrian Arab Republic
+                                      option(value='Taiwan,_Province_Of_China') Taiwan, Province of China
+                                      option(value='Tajikistan') Tajikistan
+                                      option(value='Tanzania,_United_Republic_Of') Tanzania, United Republic of
+                                      option(value='Thailand') Thailand
+                                      option(value='Timor-leste') Timor-leste
+                                      option(value='Togo') Togo
+                                      option(value='Tokelau') Tokelau
+                                      option(value='Tonga') Tonga
+                                      option(value='Trinidad_And_Tobago') Trinidad and Tobago
+                                      option(value='Tunisia') Tunisia
+                                      option(value='Turkey') Turkey
+                                      option(value='Turkmenistan') Turkmenistan
+                                      option(value='Turks_And_Caicos_Islands') Turks and Caicos Islands
+                                      option(value='Tuvalu') Tuvalu
+                                      option(value='Uganda') Uganda
+                                      option(value='Ukraine') Ukraine
+                                      option(value='United_Arab_Emirates') United Arab Emirates
+                                      option(value='United_Kingdom') United Kingdom
+                                      option(value='United_States', selected='selected') United States
+                                      option(value='United_States_Minor_Outlying_Islands') United States Minor Outlying Islands
+                                      option(value='Uruguay') Uruguay
+                                      option(value='Uzbekistan') Uzbekistan
+                                      option(value='Vanuatu') Vanuatu
+                                      option(value='Venezuela') Venezuela
+                                      option(value='Viet_Nam') Viet Nam
+                                      option(value='Virgin_Islands,_British') Virgin Islands, British
+                                      option(value='Virgin_Islands,_U.S.') Virgin Islands, U.S.
+                                      option(value='Wallis_And_Futuna') Wallis and Futuna
+                                      option(value='Western_Sahara') Western Sahara
+                                      option(value='Yemen') Yemen
+                                      option(value='Zambia') Zambia
+                                      option(value='Zimbabwe') Zimbabwe
+                                .form-group
+                                  label.col-sm-2.control-label Bio
+                                  .col-sm-8
+                                    textarea.form-control.fullscreen
+                        .panel-footer
+                          .row
+                            .col-sm-8.col-sm-offset-2
+                              button.btn-primary.btn Save
+                              button.btn-default.btn Reset
+                  // .tab-content
+                // col-sm-8
+              .row
+                .col-md-8
+                  .panel.panel-white(data-widget='{"draggable": "false"}')
+                    .panel-heading
+                      h2 World Map
+                      .panel-ctrls.button-icon-bg(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-colorpicker='', data-action-refresh-demo='{"type": "circular"}')
+                    .panel-body
+                      #worldmap.mt-sm.mb-sm(style='height: 272px; width: 100%;')
+          // .container-fluid
+        // #page-content
+      footer(role='contentinfo')
+        .clearfix
+          ul.list-unstyled.list-inline.pull-left
+            li
+              h6(style='margin: 0;') © 2015 Avenxo
+          button#back-to-top.pull-right.btn.btn-link.btn-xs.hidden-print
+            i.ti.ti-arrow-up
