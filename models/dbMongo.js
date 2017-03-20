@@ -2,10 +2,13 @@ var mongoose = require('mongoose');
 
 var db = mongoose.connect('mongodb://voidp34r:akuma@ds145848.mlab.com:45848/voidpear', function(err) {
   if (err) {
-    console.log(err.ok);
-    console.log(err.code);
-    console.log(err.errmsg);
-    console.log('Não conseguimos conectar ao bando de dados MONGODB na máquina remota.');
+    console.log('Sem conexão com MongoDb na máquina remota.');
+	console.log('Vai o MongoDb Local mesmo :P');
+	mongoose.connect('mongodb://localhost/test', function(err) {
+	  if (err) {
+	    console.log('Crap!!! ,nem mesmo o  Db local funcionou :( ');
+	  }
+	});
   }
 });
 
@@ -27,7 +30,7 @@ var db = mongoose.connect('mongodb://voidp34r:akuma@ds145848.mlab.com:45848/void
 // var db = mongoose.createConnection('mongodb://675769210965-compute@104.155.167.71:27017/test');
 // mongoose.connect('mongodb://localhost/test', function(err) {
 //   if (err) {
-//     console.log('Could not connect to mongodb on localhost. Ensure that you have mongodb running on localhost and mongodb accepts connections on standard ports!');
+//     console.log('Could not connect to mongodb on localhost.');
 //   }
 // });
 
