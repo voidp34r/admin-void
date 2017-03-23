@@ -1,4 +1,4 @@
-
+//
 var deepstream = require('deepstream.io-client-js');
 
 var config = require('../config');
