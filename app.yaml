@@ -1,6 +1,7 @@
 runtime: nodejs
 env: flex
 api_version: 1
+service: matheusr.com
 
 # f1-micro target
 resources:
@@ -19,13 +20,13 @@ manual_scaling:
 #   unhealthy_threshold: 2
 #   healthy_threshold: 2
 
-# network:
-#   forwarded_ports:
-#     - 3000/tcp
-#     - 8888/tcp
-#    accessConfigs:
-#       - name: External NAT
-#         type: ONE_TO_ONE_NAT
+network:
+  forwarded_ports:
+    - 3000/tcp
+    - 8888/tcp
+   accessConfigs:
+      - name: External NAT
+        type: ONE_TO_ONE_NAT
 
 # Temporary workaround for a Cloud SDK bug.
 # Ensures that node_modules directory and any .log files are not uploaded (the

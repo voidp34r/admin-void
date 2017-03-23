@@ -1,54 +1,35 @@
-header#topnav.navbar.navbar-default.navbar-fixed-top(role='banner')
-  .logo-area
-    span#trigger-sidebar.toolbar-trigger.toolbar-icon-bg
-      a(data-toggle='tooltips', data-placement='right', title='Toggle Sidebar')
-        span.icon-bg
-          i.ti.ti-menu
-    a.navbar-brand(href='/') Void
-    #toolbar-search.toolbar-icon-bg.hidden-xs
-      .input-group
-        span.input-group-btn
-          button.btn(type='button')
-            i.ti.ti-search
-        input.form-control(type='text', placeholder='Buscar...')
-        span.input-group-btn
-          button.btn(type='button')
-            i.ti.ti-close
-  // logo-area
-  ul.nav.navbar-nav.toolbar.pull-right
-    li#trigger-toolbar-search.toolbar-icon-bg.visible-xs-block
-      a(href='#')
-        span.icon-bg
-          i.ti.ti-search
-    li.toolbar-icon-bg.hidden-xs
-      a(href='#')
-        span.icon-bg
-          i.ti.ti-world
-    li.toolbar-icon-bg.hidden-xs
-      a(href='#')
-        span.icon-bg
-          i.ti.ti-view-grid
-    li#trigger-fullscreen.toolbar-icon-bg.hidden-xs
-      a.toggle-fullscreen(href='#')
-        span.icon-bg
-          i.ti.ti-fullscreen
-    if (!user)
-      li.dropdown.toolbar-icon-bg
-        a.dropdown-toggle.username(href='#', data-toggle='dropdown')
+#wrapper
+  header#topnav.navbar.navbar-default.navbar-fixed-top(role='banner')
+    .logo-area
+      a.navbar-brand(.href='#') logo
+      #toolbar-search.toolbar-icon-bg.hidden-xs
+        .input-group
+          span.input-group-btn
+            button.btn(type='button')
+              i.ti.ti-search
+          input.form-control(type='text', placeholder='Buscar...')
+          span.input-group-btn
+            button.btn(type='button')
+              i.ti.ti-close
+    // logo-area
+    ul.nav.navbar-nav.toolbar.pull-right
+      li#trigger-toolbar-search.toolbar-icon-bg.visible-xs-block
+        a(href='#')
           span.icon-bg
-            i.ti.ti-user
-        ul.dropdown-menu.userinfo.arrow
-          li
-            a(href='/login')
-              i.ti.ti-user
-              span Login
-          li.divider
-          li
-            a(href='/logout')
-              i.ti.ti-shift-right
-              span Sign Out
-    if (user)
-      li.dropdown.toolbar-icon-bg.hidden-xs
+            i.ti.ti-search
+      li.toolbar-icon-bg
+        a(href='#')
+          span.icon-bg
+            i.ti.ti-world
+      li.toolbar-icon-bg
+        a(href='#')
+          span.icon-bg
+            i.ti.ti-view-grid
+      li#trigger-fullscreen.toolbar-icon-bg.hidden-xs
+        a.toggle-fullscreen(href='#')
+          span.icon-bg
+            i.ti.ti-fullscreen
+      li.dropdown.toolbar-icon-bg
         a.hasnotifications.dropdown-toggle(href='#', data-toggle='dropdown')
           span.icon-bg
             i.ti.ti-email

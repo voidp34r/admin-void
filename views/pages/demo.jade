@@ -1,0 +1,110 @@
+
+#wrapper
+  #layout-static
+    if(user)
+      include ../partials/menu_bar
+    .static-content-wrapper
+      .static-content
+        .page-content
+          ol.breadcrumb
+            li
+              a(href='index.html') Home
+            li.active
+              a(href='ui-advancedpanels.html') Advanced Panels
+          .container-fluid
+            .row
+              .col-md-12
+                .alert.alert-info.clearfix
+                  h3.mt0 Draggable Panels
+                  p
+                    | Wijets is a jQuery plugin that provides advanced panel options which can be configured all with a single line of code - 
+                    code $.wijets.make();
+                    | . All other settings are configured directly with data-attributes!
+            .row(data-widget-group='group-demo')
+              .col-md-4
+                .panel.panel-default(data-widget='{"id" : "wiget1"}')
+                  .panel-heading
+                    .panel-ctrls.button-icon(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-expand='', data-action-colorpicker='', data-action-refresh='{"type":"circular", "url":"ajax-text.html"}', data-action-close='')
+                    h2 Panel
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam dolore ad est molestiae quasi qui id quas, corporis, laboriosam.
+                .panel.panel-inverse(data-widget='{"id" : "wiget2"}')
+                  .panel-heading
+                    .panel-ctrls.button-icon(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-expand='', data-action-colorpicker='', data-action-refresh='{"type":"circular", "url":"ajax-text.html"}', data-action-close='')
+                    h2 Panel
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam dolore ad est molestiae quasi qui id quas, corporis, laboriosam.
+                .panel.panel-primary(data-widget='{"id" : "wiget3"}')
+                  .panel-heading
+                    .panel-ctrls.button-icon(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-expand='', data-action-colorpicker='', data-action-refresh='{"type":"circular", "url":"ajax-text.html"}', data-action-close='')
+                    h2 Panel
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam dolore ad est molestiae quasi qui id quas, corporis, laboriosam.
+              .col-md-4
+                .panel.panel-success(data-widget='{"id" : "wiget4"}')
+                  .panel-heading
+                    .panel-ctrls.button-icon(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-expand='', data-action-colorpicker='', data-action-refresh='{"type":"circular", "url":"ajax-text.html"}', data-action-close='')
+                    h2 Panel
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam dolore ad est molestiae quasi qui id quas, corporis, laboriosam.
+                  //.panel.panel-danger(data-widget='{"id" : "wiget5", "draggable": "false"}')
+                .panel.panel-danger(data-widget='{"id" : "wiget5"}')
+                  .panel-heading
+                    .panel-ctrls.button-icon(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-expand='', data-action-colorpicker='', data-action-refresh='{"type":"circular", "url":"ajax-text.html"}', data-action-close='')
+                    h2 Draggable
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam dolore ad est molestiae quasi qui id quas, corporis, laboriosam.
+                .panel.panel-warning(data-widget='{"id" : "wiget6"}')
+                  .panel-heading
+                    .panel-ctrls.button-icon(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-expand='', data-action-colorpicker='', data-action-refresh='{"type":"circular", "url":"ajax-text.html"}', data-action-close='')
+                    h2 Panel
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam dolore ad est molestiae quasi qui id quas, corporis, laboriosam.
+              .col-md-4
+                .panel.panel-brown(data-widget='{"id" : "wiget7"}')
+                  .panel-heading
+                    .panel-ctrls.button-icon(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-expand='', data-action-colorpicker='', data-action-refresh='{"type":"circular", "url":"ajax-text.html"}', data-action-close='')
+                    h2 Panel
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam dolore ad est molestiae quasi qui id quas, corporis, laboriosam.
+                .panel.panel-purple(data-widget='{"id" : "wiget8"}')
+                  .panel-heading
+                    .panel-ctrls.button-icon(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-expand='', data-action-colorpicker='', data-action-refresh='{"type":"circular", "url":"ajax-text.html"}', data-action-close='')
+                    h2 Panel
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam dolore ad est molestiae quasi qui id quas, corporis, laboriosam.
+                .panel.panel-midnightblue(data-widget='{"id" : "wiget9"}')
+                  .panel-heading
+                    .panel-ctrls.button-icon(data-actions-container='', data-action-collapse='{"target": ".panel-body"}', data-action-expand='', data-action-colorpicker='', data-action-refresh='{"type":"circular", "url":"ajax-text.html"}', data-action-close='')
+                    h2 Panel
+                  .panel-editbox(data-widget-controls='')
+                  .panel-body
+                    p
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nam dolore ad est molestiae quasi qui id quas, corporis, laboriosam.
+          // .container-fluid
+        // #page-content
+       if (user)
+        include ../partials/theme_color
+      footer(role='contentinfo')
+        .clearfix
+          ul.list-unstyled.list-inline.pull-left
+            li
+              h6(style='margin: 0;') © 2017 Matheus Rafael
+          button#back-to-top.pull-right.btn.btn-link.btn-xs.hidden-print
+            i.ti.ti-arrow-up

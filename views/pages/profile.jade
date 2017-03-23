@@ -2,7 +2,7 @@
 #wrapper
   #layout-static
     if(user)
-      include menu_bar
+      include ../partials/menu_bar
     .static-content-wrapper
       .static-content
         .page-content
@@ -580,7 +580,7 @@
           // .container-fluid
         // #page-content
        if (user)
-        include tools/theme_color
+        include ../partials/theme_color
       footer(role='contentinfo')
         .clearfix
           ul.list-unstyled.list-inline.pull-left

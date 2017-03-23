@@ -19981,15 +19981,23 @@ body.error .error-wrapper h1 {
   #topnav .navbar-brand {
     width: 68px;
   }
+
+  #topnav .navbar-brandvoid {
+    width: 68px;
+  }
 }
-#topnav.navbar-default .navbar-brand,
+#topnav.navbar-default .navbar-brand  ,
 #topnav.navbar-bluegraylight .navbar-brand,
 #topnav.navbar-graylight .navbar-brand {
   background: url("../img/logo-dark.png") no-repeat left 0 center;
 }
-#topnav .navbar-brand {
-  background: url("../img/logo.png") no-repeat left 0 center;
+
+#topnav.navbar-graylight .navbar-brandvoid,
+#topnav.navbar-bluegraylight .navbar-brandvoid,
+#topnav.navbar-graylight .navbar-brandvoid, {
+  background: url("../img/logo-void.png") no-repeat left 0 center;
 }
+
 #topnav .dropdown-menu,
 #topnav .tt-dropdown-menu {
   background-color: #ffffff;

@@ -1,11 +1,12 @@
 doctype html
 html(lang='pt-BR')
   head
-    include core/head
+    include ./partials/head
 
-  body.animated-content.sidebar-collapsed
-  include core/sidebar
-    block content
+  body.animated-content
+    #wrapper
+      include ./partials/header
+      block content
 
-    include core/scripts
+    include ./partials/scripts
     

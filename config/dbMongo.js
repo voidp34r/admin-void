@@ -1,13 +1,17 @@
 var mongoose = require('mongoose');
+var bson = require('bson');
 
-var db = mongoose.connect('mongodb://voidp34r:akuma@ds145848.mlab.com:45848/voidpear', function(err) {
+var db = mongoose.connect('mongodb://voidp34r:akuma@ds145848.mlab.com:45848/voidpear', function(err, databse) {
   if (err) {
     console.log('Sem conexão com MongoDb na máquina remota.');
 	console.log('Vai o MongoDb Local mesmo :P');
+
 	mongoose.connect('mongodb://localhost/test', function(err) {
 	  if (err) {
 	    console.log('Crap!!! ,nem mesmo o  Db local funcionou :( ');
+	    return (null, err);
 	  }
+	  // return (null, err);
 	});
   }
 });
