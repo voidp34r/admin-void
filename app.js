@@ -25,13 +25,8 @@ app.use(cookieParser());
 app.use(session({keys: ['secretkey1', 'secretkey2', '...']}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-//DeepStream
-var deepstream = require('deepstream.io-client-js');
-//Conecting model client for Deepstream
-var client = require('./models/client');
-
 // Configure db (MongoDB) for authentication
-var db = require('./config/dbMongo');
+// var db = require('./config/dbMongo');
 
 // Configure passport middleware
 app.use(passport.initialize());
@@ -41,7 +36,12 @@ app.use(passport.session());
 var passport_local = require('./config/passport_local');
 
 // Configure db (rehtinDb) for authentication
-var record = require('./config/rethinkdb');
+// var record = require('./config/rethinkdb');
+
+//DeepStream
+var deepstream = require('deepstream.io-client-js');
+//Conecting model client for Deepstream
+var client = require('./config/deepstream');
 
 // Register routes
 app.use('/', require('./routes/routes'));
