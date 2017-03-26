@@ -64,8 +64,6 @@ function test () {
   })
 }
 
-test();
-
 function wrapRecord(record) {
   record.subscribe(function(data) {
     for (var prop in data)
