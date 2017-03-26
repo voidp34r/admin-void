@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-
-
+var rdb = require('rethinkdb');
+var r = require('rethinkdbdash')();
 
 var app = express();
 
@@ -27,7 +27,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //DeepStream
 var deepstream = require('deepstream.io-client-js');
+//Conecting model client for Deepstream
 var client = require('./models/client');
+
+// Configure db (MongoDB) for authentication
+var db = require('./config/dbMongo');
 
 // Configure passport middleware
 app.use(passport.initialize());
@@ -35,8 +39,9 @@ app.use(passport.session());
 
 // Configure passport-local to use account model for authentication
 var passport_local = require('./config/passport_local');
-// Configure db (MongoDB) for authentication
-var db = require('./config/dbMongo');
+
+// Configure db (rehtinDb) for authentication
+var record = require('./config/rethinkdb');
 
 // Register routes
 app.use('/', require('./routes/routes'));

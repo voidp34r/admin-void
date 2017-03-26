@@ -1,6 +1,7 @@
 var passport = require('passport');
 var Account = require('../models/account');
 var router = require('express').Router();
+var r = require('rethinkdbdash')();
 var debug = false;
 
 router.get('/', function(req, res) {

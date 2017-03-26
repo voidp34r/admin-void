@@ -2,11 +2,10 @@ doctype html
 html(lang='pt-BR')
   head
     include ./partials/head
-
-  body.animated-content
-    #wrapper
-      include ./partials/header
-      block content
-
-    include ./partials/scripts
     
+  body.animated-content(ng-app='ng-void-app')
+    include ./partials/header
+    
+    #wrapper
+      block content
+    include ./partials/scripts

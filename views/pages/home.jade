@@ -1,10 +1,97 @@
-extends ../layouts/layout_profile
 
+include ../partials/menu_bar
 block content
-    include demo
-  
-include ../partials/scripts
- 
+ #wrapper
+  #layout-static
+    .static-content-wrapper
+      .static-content
+        .page-content
+          ol.breadcrumb
+            li
+              a(href='/') Home
+            li.active
+              a(href='/dev') Dev
+          .container-fluid
+            .row
+              .col-md-12
+                .alert.alert-info.clearfix
+                  h3.mt0 #{user}
+                  .row
+                    .col-xs-16(ng-controller='users')
+                      ul.list-group
+                        .col-sm-6
+                          li.list-group-item(ng-class="{'active': $parent.selectedUser === user.name }", ng-click='selectUser( user.name )', ng-repeat='user in users') User: 
+                            em
+                              span(ng-bind="user.get('firstname')")
+                            em
+                              | - 
+                            em
+                              span(ng-bind="user.get('lastname')")
+                            em
+                              | : 
+                            span(ng-bind="user.get('title')")
+                            .col-md-3
+                              .delete-button.pull-left
+                                .span Editar 
+                                  .fa.fa-pencil(ng-click='deleteUser( user.name )')
+                              .delete-button.pull-rigth
+                                .span Deletar 
+                                  .fa.fa-remove(ng-click='deleteUser( user.name )')
+                              .btn.btn-danger(ng-click='deleteUser( user.name )')
+                                .i.fa.fa-pencil
+                          .col-md-6
+                            .btn.btn-default(ng-click='addUser()')
+                              .i.fa.fa-plus
+                                span  add usuário 
+                    .col-xs-16(ng-controller='user')
+                      fieldset
+                        .legend Dados Gerais
+                        ul.demo-btns.mb-n.xs
+                          li.mb-n
+                            .input-group
+                              .span.input-group-addon
+                                label(for='firstname') Firstname
+                              input.form-control(ng-model='firstname', type='text')
+                          li.mb-n
+                            .input-group
+                              .span.input-group-addon
+                                label(for='lastname') Lastname
+                              input.form-control(ng-model='lastname', type='text')
+                          li.mb-n
+                            .input-group
+                              .span.input-group-addon
+                                label(for='title') Title
+                              input.form-control(ng-model='title', type='text')
+                      fieldset
+                        .legend Endereço
+                        ul.demo-btns.mb-n.xs
+                          li.mb-n
+                            .input-group
+                              .span.input-group-addon
+                                label Street
+                              input.form-control(ng-model='street', type='text')
+                          li.mb-n
+                            .input-group
+                              .span.input-group-addon
+                                label Nr
+                              input.form-control(ng-model='number', type='text')
+                          li.mb-n
+                            .input-group
+                              .span.input-group-addon
+                                label Post Code
+                              input.form-control(ng-model='postcode', type='text')
+                          li.mb-n
+                            .input-group
+                              .span.input-group-addon
+                                label City
+                              input.form-control(ng-model='city', type='text')
 
-
-
+          // .container-fluid
+        // #page-content
+      footer(role='contentinfo')
+        .clearfix
+          ul.list-unstyled.list-inline.pull-left
+            li
+              h6(style='margin: 0;') © 2017 Matheus Rafael
+          button#back-to-top.pull-right.btn.btn-link.btn-xs.hidden-print
+            i.ti.ti-arrow-up
