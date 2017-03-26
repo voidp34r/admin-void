@@ -18,52 +18,53 @@ server.set("storage", new DSRethinkConnector({
 
 function test () {
  
-  // var connection = null;
-  // r.connect( {
-  //   host: 'localhost',
-  //   port: 28015,
-  //   splitChar: "/",
-  //   defaultTable: "deepstream"
-  // }, function(err, conn) {
-  //     if (err) throw err;
-  //     connection = conn;
-  // });
+  var connection = null;
+  r.connect( {
+    host: 'localhost',
+    port: 28015,
+    splitChar: "/",
+    defaultTable: "deepstream"
+  }, function(err, conn) {
+      if (err) throw err;
+      connection = conn;
+  });
 
 
-  // r.connect( {
-  //   host: 'localhost',
-  //   port: 28015,
-  //   splitChar: "/",
-  //   defaultTable: "deepstream"
-  // }, function(err, conn) {
-  //   if (err) throw err;
-  //   r.dbList().run(conn, function (err, data) {
-  //     if (err) throw err;
-  //       console.log('Bando de dados atuais: ', data);
-  //   });
-  // });
+  r.connect( {
+    host: 'localhost',
+    port: 28015,
+    splitChar: "/",
+    defaultTable: "deepstream"
+  }, function(err, conn) {
+    if (err) throw err;
+    r.dbList().run(conn, function (err, data) {
+      if (err) throw err;
+        console.log('Bando de dados atuais: ', data);
+    });
+  });
 
-  // r.connect( {
-  //   host: 'localhost',
-  //   port: 28015,
-  //   splitChar: "/",
-  //   defaultTable: "deepstream"
-  // }, function(err, conn) {
-  //   if (err) throw err;
-  //   r.dbCreate('void001').run(conn, function (err, data) {
-  //     if (err) throw err;
-  //       console.log(data);
-  //   });
-  // });
+  r.connect( {
+    host: 'localhost',
+    port: 28015,
+    splitChar: "/",
+    defaultTable: "deepstream"
+  }, function(err, conn) {
+    if (err) throw err;
+    r.dbCreate('void001').run(conn, function (err, data) {
+      if (err) throw err;
+        console.log(data);
+    });
+  });
 
 
 
-  // r.db('test').tableCreate('voidtest').run(connection, function(err, result) {
-  //     if (err) throw err;
-  //     console.log(JSON.stringify(result, null, 2));
-  // })
+  r.db('test').tableCreate('voidtest').run(connection, function(err, result) {
+      if (err) throw err;
+      console.log(JSON.stringify(result, null, 2));
+  })
 }
 
+test();
 
 function wrapRecord(record) {
   record.subscribe(function(data) {
@@ -76,7 +77,7 @@ function wrapRecord(record) {
 }
 
 // Connect to the deepstream server
-var ds = deepstream("localhost:6020").login({username: 'void-Server'});
+var ds = deepstream("localhost:6020").login();
 // Create a unique voidpear for the new record
 var voidpear = "voidpear/" + ds.getUid();
 // Instantiate a new record
