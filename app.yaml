@@ -1,7 +1,7 @@
 runtime: nodejs
 env: flex
 api_version: 1
-service: matheusr.com
+service: matheusr-01
 
 # f1-micro target
 resources:
@@ -23,7 +23,9 @@ manual_scaling:
 network:
   forwarded_ports:
     - 3000/tcp
-    - 8888/tcp
+    - 28017/tcp
+    - 29017/tcp
+
    accessConfigs:
       - name: External NAT
         type: ONE_TO_ONE_NAT
