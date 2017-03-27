@@ -13,9 +13,9 @@ sudo echo "deb http://ftp.debian.org/debian jessie-backports main" | sudo tee -a
 sudo echo "deb http://download.rethinkdb.com/apt jessie main" | sudo tee -a /etc/apt/sources.list
 sudo echo "deb http://dl.bintray.com/deepstreamio/deb jessie main" | sudo tee -a /etc/apt/sources.list
 # add contrib non-free
-sudo echo "deb-src http://ftp.debian.org/debian jessie-backports main jessie-backports main" | sudo tee -a /etc/apt/sources.list
-sudo echo "deb-src http://download.rethinkdb.com/apt jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
-sudo echo "deb-src http://download.rethinkdb.com/apt jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+#sudo echo "deb-src http://ftp.debian.org/debian jessie-backports main jessie-backports main" | sudo tee -a /etc/apt/sources.list
+#sudo echo "deb-src http://download.rethinkdb.com/apt jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+#sudo echo "deb-src http://download.rethinkdb.com/apt jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
 #wheezy
 # sudo echo "deb http://download.rethinkdb.com/apt whezzy main" | sudo tee -a /etc/apt/sources.list
 # sudo echo "deb-src http://download.rethinkdb.com/apt whezzy main" | sudo tee -a /etc/apt/sources.list
@@ -24,9 +24,9 @@ sudo echo "deb http://ftp.debian.org/debian jessie-backports main jessie-backpor
 sudo echo "deb http://download.rethinkdb.com/apt jessie main" | sudo tee -a /etc/apt/sources.list
 sudo echo "deb http://dl.bintray.com/deepstreamio/deb jessie main" | sudo tee -a /etc/apt/sources.list
 # add contrib non-free
-sudo echo "deb-src http://ftp.debian.org/debian jessie-backports main jessie-backports main non-free" | sudo tee -a /etc/apt/sources.list
-sudo echo "deb-src http://download.rethinkdb.com/apt jessie main" | sudo tee -a /etc/apt/sources.list
-sudo echo "deb-src http://dl.bintray.com/deepstreamio/deb jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
+#sudo echo "deb-src http://ftp.debian.org/debian jessie-backports main jessie-backports main non-free" | sudo tee -a /etc/apt/sources.list
+#sudo echo "deb-src http://download.rethinkdb.com/apt jessie main" | sudo tee -a /etc/apt/sources.list
+#sudo echo "deb-src http://dl.bintray.com/deepstreamio/deb jessie main contrib non-free" | sudo tee -a /etc/apt/sources.list
 #wheezy
 # sudo echo "deb http://dl.bintray.com/deepstreamio/deb whezzy main" | sudo tee -a /etc/apt/sources.list
 # sudo echo "deb-src http://dl.bintray.com/deepstreamio/deb whezzy main" | sudo tee -a /etc/apt/sources.list
