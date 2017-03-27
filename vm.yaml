@@ -1,0 +1,38 @@
+resources:
+  name: vm-void-deployment
+- type: compute.v1.instance
+  properties:
+    zone: us-central1-f
+    machineType: https://www.googleapis.com/compute/v1/projects/matheusr-03/zones/us-central1-f/machineTypes/f1-micro
+    disks:
+    - deviceName: boot
+      type: PERSISTENT
+      boot: true
+      autoDelete: true
+      initializeParams:
+        sourceImage: https://www.googleapis.com/compute/v1/projects/debian-cloud/global/images/family/debian-8
+    networkInterfaces:
+    - network: https://www.googleapis.com/compute/v1/projects/matheusr-03/global/networks/default
+      # Access Config required to give the instance a public IP address
+      accessConfigs:
+      - name: External NAT
+        type: ONE_TO_ONE_NAT
+    metadata:
+      items:
+      - key: startup-script
+        value: |
+          #!/bin/bash
+          sudo echo "deb http://download.rethinkdb.com/apt jessie main" | sudo tee -a /etc/apt/sources.list
+          sudo wget -qO- https://download.rethinkdb.com/apt/pubkey.gpg | sudo apt-key add -
+          sudo echo "deb http://dl.bintray.com/deepstreamio/deb jessie main" | sudo tee -a /etc/apt/sources.list
+          sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61
+          sudo cat /etc/apt/sourceslist
+          sudo apt-get update
+          sudo apt-get install -y build-essential protobuf-compiler python \
+                     libprotobuf-dev libcurl4-openssl-dev \
+                     libboost-all-dev libncurses5-dev \
+                     libjemalloc-dev wget m4
+          sudo apt-get install -y deepstream.io
+          sudo apt-get install -y rethinkdb
+          sudo apt-get install -y build-essential chkconfig 
+
